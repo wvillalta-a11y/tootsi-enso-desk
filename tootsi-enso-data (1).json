@@ -1,0 +1,1427 @@
+{
+ "updated": "2026-11-05",
+ "enso": {
+  "asOf": "2026-11-04",
+  "alertStatus": "El Niño Advisory",
+  "headline": "Very strong El Niño, still strengthening",
+  "synopsis": "El Niño continues to strengthen. NOAA puts the chance of a strong-to-very strong event through January–March 2027 above 83%. The peak is expected in November–December 2026.",
+  "nino34_cpc_weekly": 2.5,
+  "nino34_cpc_weekly_date": "2026-11-02",
+  "nino34_iri_weekly": 3.3,
+  "nino34_iri_weekly_date": "2026-10-14",
+  "nino34_monthly_sep": 2.84,
+  "nino12_cpc_weekly": 4.6,
+  "roni_latest": 1.7,
+  "roni_season": "JAS 2026",
+  "cpc_last_discussion": "2026-10-08",
+  "next_noaa_release": "2026-11-12",
+  "baseNote": "NOAA's weekly figure is lower than IRI's. The two use different baselines: NOAA's official index is now the relative index (RONI), while IRI reports the traditional Niño 3.4.",
+  "strength": [
+   {
+    "label": "SON 2026",
+    "p": 54,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "OND 2026",
+    "p": 83,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "NDJ 2026/27",
+    "p": 70,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "Through JFM 2027",
+    "p": 83,
+    "desc": "Strong-to-very strong (>83%)"
+   }
+  ],
+  "strengthNote": "+2.5°C on the relative index would exceed every El Niño since 1950. IRI reports that all 27 models forecast a 'very strong' event (≥ +2.0°C) from OND 2026 through DJF 2026/27, about 10 of them at +3.5°C or more.",
+  "seasons": [
+   {
+    "s": "OND 2026",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "NDJ",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "DJF",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "JFM 2027",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "FMA",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "MAM",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "AMJ",
+    "nino": 92,
+    "neutral": 8
+   },
+   {
+    "s": "MJJ",
+    "nino": 60,
+    "neutral": 40
+   },
+   {
+    "s": "JJA 2027",
+    "nino": 37,
+    "neutral": 51
+   }
+  ],
+  "outlook": [
+   "Peak expected in November–December 2026. The multi-model mean is about +3.5°C (traditional Niño 3.4) for OND and NDJ.",
+   "El Niño stays almost certain through spring 2027: 100% through MAM, 92% in AMJ.",
+   "Decay starts in early summer 2027: 60% in MJJ, and ENSO-neutral becomes most likely (51%) by JJA 2027.",
+   "Coastal El Niño is extreme: Niño 1+2 is +4.6°C (NOAA), above +5°C for three weeks (IRI). Expect heavy rain and flooding risk for coastal Peru and Ecuador in Jan–Apr 2027.",
+   "Positive Indian Ocean Dipole (+0.51°C in September) adds to dryness in Indonesia and Australia."
+  ]
+ },
+ "products": [
+  {
+   "id": "cocoa",
+   "name": "Cocoa powder, chocolate chips and chunks, chocolate-covered items",
+   "category": "Chocolates",
+   "skus": "20087, 20088, 10970, 10971, 10858, 10891",
+   "origins": [
+    "Côte d'Ivoire",
+    "Ghana"
+   ],
+   "window": "Now through Q3 2027 (mid-crop Apr–Sep 2027)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "El Niño brings a harsher Harmattan and below-average rain to West Africa from Dec to Feb, which hurts pod setting for the 2027 mid-crop. Ghana's estimate is 650 kt (−13%) and Côte d'Ivoire's about 1.8 Mt (−18%). StoneX now sees a 64 kt global deficit for 2026/27 instead of a surplus. ICE cocoa is about $5,800/t, a one-month high in mid-October.",
+   "action": "Lock chocolate and cocoa powder pricing with Barry Callebaut and other suppliers through June 2027. Move seasonal (Easter 2027) chocolate orders forward. Expect coating and compound price increases from January.",
+   "crop": 5
+  },
+  {
+   "id": "coconut",
+   "name": "Desiccated coconut, coconut chips, milk, butter, flour and sugar",
+   "category": "Organic",
+   "skus": "36120, 36132, desiccated fine/medium, coconut chips",
+   "origins": [
+    "Philippines",
+    "Indonesia",
+    "Sri Lanka",
+    "Vietnam"
+   ],
+   "window": "Q2 2027–Q1 2028 (6–12 month lag)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "Drought cuts coconut nut set, and output falls 6–12 months later. Prices have been flat for over 27 weeks (EUR 2,500–2,750/t FCA NL). Mundus Agri expects a weather premium in Q1–Q2 2027. PAGASA forecasts below-normal rain in key Philippine coconut areas. Higher palm oil prices also lift coconut oil.",
+   "action": "Buy now while origin prices are still flat. Extend cover to 6 months and ask suppliers for fixed-price contracts through Q2 2027. Get a second origin (Sri Lanka or Vietnam) for organic items.",
+   "crop": 4
+  },
+  {
+   "id": "tropfruit",
+   "name": "Dried mango, pineapple, papaya, lychee, low-sugar mango and strawberries",
+   "category": "Dried Fruits",
+   "skus": "24026, 24027, 24028, 10755, 10756, 10750, 10752, 10753, 24010–24017",
+   "origins": [
+    "Thailand",
+    "Vietnam",
+    "Philippines"
+   ],
+   "window": "Mar–Jul 2027 (mango season)",
+   "cover": "5",
+   "isNew": false,
+   "mechanism": "Krungsri expects Thai rainfall 10–13% below normal, with heavier crop losses in 2027 (THB 110 bn in damage). Dry flowering reduces the 2027 mango and pineapple crop. The new 2026 Thai low-sugar line has no buffer stock yet.",
+   "action": "Contract 2027 mango-season volumes in December–January rather than spring. Hold 5 months of cover on mango and pineapple. Prioritize the new Thai low-sugar SKUs.",
+   "crop": 4
+  },
+  {
+   "id": "brazilnut",
+   "name": "Brazil nuts (conventional and organic, medium, midget, broken)",
+   "category": "Nuts",
+   "skus": "30056, 38002, 30072, 30067, 11390",
+   "origins": [
+    "Bolivia – Amazon",
+    "Peru – Amazon",
+    "Brazil – Amazon"
+   ],
+   "window": "2027/28 crop (harvest Dec 2027–Mar 2028)",
+   "cover": "9–12",
+   "isNew": false,
+   "mechanism": "The current crop has recovered strongly: 105 kt in-shell (+81%). But Brazil nut trees flower in Oct–Dec, and El Niño drought during flowering cut later crops in 2015/16 and 2024. INPE warns that the Amazon drought could match or beat 2015. Low rivers and Bolivia's diesel shortages also delay exports through Arica.",
+   "action": "Buy forward now, while there is a good crop at EUR ~13.50/kg FCA NL. Extend cover to 9–12 months. Brazil nuts keep well frozen or chilled, so confirm cold-storage space.",
+   "crop": 5
+  },
+  {
+   "id": "quinoa",
+   "name": "Quinoa (white, red, black, tri-colour, puffed, crispy, flour)",
+   "category": "Seeds and Grains",
+   "skus": "Organic Peruvian white/black, 3-colour, puffed, crispy quinoa",
+   "origins": [
+    "Peru – Altiplano",
+    "Bolivia – Altiplano"
+   ],
+   "window": "2027 harvest (Apr–Jun 2027)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "El Niño dries out the Altiplano during the Oct–Mar growing season. Peru's Senamhi warns of severe drought in Puno through 2027. White quinoa is about EUR 3.22/kg FCA, firm but not yet pricing in crop loss. Coastal flooding can also block Peruvian roads and ports.",
+   "action": "Extend cover to 6 months before Altiplano rainfall data (Dec–Feb) moves prices. Split purchases between Peru and Bolivia.",
+   "crop": 4
+  },
+  {
+   "id": "cashew",
+   "name": "Cashews (raw, roasted, flavoured, pieces, butter)",
+   "category": "Nuts",
+   "skus": "10203, 10212, cashew pieces LP/SP/SSP, 10253, 10255, 11435",
+   "origins": [
+    "Vietnam",
+    "Côte d'Ivoire",
+    "Tanzania",
+    "India",
+    "Cambodia"
+   ],
+   "window": "Feb–Jun 2027 (new raw-nut season)",
+   "cover": "4–5",
+   "isNew": false,
+   "mechanism": "ofi puts the 2026 global crop 10–12% lower, with weaker outturns. El Niño dryness in West Africa can hurt the 2027 flowering, but Tanzania's 2026/27 crop is forecast up about 21%. India's crop depends on the Northeast monsoon.",
+   "action": "Hold 4–5 months of cover. Don't chase prices: watch West African raw-nut opening prices in Feb–Mar 2027 before buying beyond Q2.",
+   "crop": 2
+  },
+  {
+   "id": "sugar",
+   "name": "Candies, gummies, coated items and sugar-infused dried fruit (sugar cost)",
+   "category": "Candies",
+   "skus": "Candy and gummy ranges, crystallized ginger, infused fruit",
+   "origins": [
+    "India",
+    "Thailand",
+    "Brazil – South"
+   ],
+   "window": "Now through Q3 2027",
+   "cover": "3–4",
+   "isNew": false,
+   "mechanism": "After a weak monsoon, India's 2026/27 sugar output forecast (27.9 Mt) is below its consumption, and exports are banned. Thai cane faces drought. Brazil's large crop caps world prices. Candy suppliers will pass on higher sugar costs.",
+   "action": "Ask candy suppliers for price-protection notices. Hold 3–4 months of cover only, since record Brazilian supply limits how far prices can rise.",
+   "crop": 3
+  },
+  {
+   "id": "rice",
+   "name": "Rice (basmati, brown, parboiled, black, puffed), rice crackers and rice flour",
+   "category": "Seeds and Grains",
+   "skus": "Basmati, 31068, organic brown/parboiled basmati, puffed rice, rice crackers",
+   "origins": [
+    "India",
+    "Pakistan",
+    "Thailand",
+    "Vietnam"
+   ],
+   "window": "Now–Q2 2027",
+   "cover": "4",
+   "isNew": false,
+   "mechanism": "Thailand's dry-season rice is at risk. India restricted rice exports in the 2023 El Niño and could do so again. Indian golden sella rose from €0.81 to €0.85/kg FOB in a week (Oct 17–24). Vietnam is steady.",
+   "action": "Hold 4 months of cover on basmati and parboiled rice. Watch Indian export-policy news weekly.",
+   "crop": 3
+  },
+  {
+   "id": "palm",
+   "name": "Palm-oil inputs: compound coatings, coated snacks, crackers, toppings",
+   "category": "Snacks",
+   "skus": "Compound coatings, coated snacks, crackers, toppings",
+   "origins": [
+    "Indonesia",
+    "Malaysia"
+   ],
+   "window": "Q2–Q3 2027 (6–12 month lag)",
+   "cover": "3",
+   "isNew": false,
+   "mechanism": "Drought hurts palm yields 6–12 months later. Indonesia's output is forecast to fall from 53.7 to 51.7 Mt in 2027, and Malaysia's to 19.8–20 Mt. The impact peaks around Mar–May 2027. High Malaysian stocks are capping prices for now.",
+   "action": "No early buying. Ask suppliers of coated products about expected 2027 surcharges.",
+   "crop": 3
+  },
+  {
+   "id": "plantain",
+   "name": "Plantain and banana chips, plantain croutons",
+   "category": "Snacks",
+   "skus": "12072, plantain chips, banana chips",
+   "origins": [
+    "Ecuador",
+    "Peru – coast",
+    "Colombia",
+    "Philippines"
+   ],
+   "window": "Jan–May 2027",
+   "cover": "4",
+   "isNew": true,
+   "mechanism": "Niño 1+2 is above +4.6°C, an extreme coastal El Niño. This brings heavy rain, floods and road and port disruption to coastal Ecuador and Peru (Guayaquil, Paita), as in 1998 and 2017. The Philippines faces drought instead.",
+   "action": "Build 4 months of cover before January. Have a backup supplier outside the Peru/Ecuador coast (Colombia or Central America).",
+   "crop": 4
+  },
+  {
+   "id": "maple",
+   "name": "Maple products (maple pecans, butter, flakes, sugar, candies)",
+   "category": "Miscellaneous",
+   "skus": "Maple syrup pecans, maple butter, maple flakes, maple sugar, 80171",
+   "origins": [
+    "Canada – Québec"
+   ],
+   "window": "Sugaring season Mar–Apr 2027",
+   "cover": "Through May 2027",
+   "isNew": false,
+   "mechanism": "Strong El Niño winters are usually milder in eastern Canada. That can shorten or disrupt the freeze–thaw cycle sap flow needs, so a poor season is more likely, though not certain. The current status of the Québec strategic reserve was not verified.",
+   "action": "Confirm 2027 allocation and pricing with maple suppliers in Q1. Order Easter and spring needs before the season starts.",
+   "crop": 3
+  },
+  {
+   "id": "spices",
+   "name": "Ginger (dried, crystallized), cinnamon, turmeric, black pepper",
+   "category": "Dried Fruits",
+   "skus": "10759, 10760, 10761, 10762, 30023",
+   "origins": [
+    "China",
+    "Thailand",
+    "Indonesia",
+    "Vietnam",
+    "India"
+   ],
+   "window": "2027 harvests",
+   "cover": "4",
+   "isNew": false,
+   "mechanism": "Drier conditions in Indonesia and Vietnam (cinnamon, pepper) and weaker Indian yields add to already tight pepper supply. Ginger from Thailand and China is less exposed.",
+   "action": "Hold 4 months on cinnamon and pepper items. Keep normal cover on ginger.",
+   "crop": 3
+  },
+  {
+   "id": "sesame",
+   "name": "Sesame seeds (natural, hulled, black, toasted)",
+   "category": "Seeds and Grains",
+   "skus": "20059, 20060, 20061, 20062",
+   "origins": [
+    "India",
+    "Ethiopia",
+    "Sudan",
+    "Nigeria",
+    "Mexico"
+   ],
+   "window": "Now–Q2 2027",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "India's kharif sesame was planted during a weak monsoon, so yields are lower. African origins are less affected by El Niño.",
+   "action": "Shift some volume toward African or Mexican origins. Normal cover.",
+   "crop": 2
+  },
+  {
+   "id": "chia",
+   "name": "Chia seeds and chia products",
+   "category": "Superfoods",
+   "skus": "Black chia, organic chia, chia powder",
+   "origins": [
+    "Paraguay",
+    "Argentina",
+    "Mexico"
+   ],
+   "window": "2027 harvest (Apr–Jun)",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "El Niño usually brings above-normal rain to Paraguay and northern Argentina. That helps yields but risks harvest delays and flooding. Bolivian lowlands can be dry.",
+   "action": "Keep normal cover. Recheck in March.",
+   "crop": 2
+  },
+  {
+   "id": "macadamia",
+   "name": "Macadamia nuts",
+   "category": "Nuts",
+   "skus": "30065, macadamia",
+   "origins": [
+    "South Africa",
+    "Kenya",
+    "Malawi",
+    "Australia"
+   ],
+   "window": "2027 crop",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "El Niño dries southern Africa (Malawi, South Africa) and eastern Australia during flowering. It's too early to size the impact, and China's crop is up.",
+   "action": "Keep normal cover. Watch southern African rainfall in Dec–Feb.",
+   "crop": 2
+  },
+  {
+   "id": "peanuts",
+   "name": "Peanuts and peanut products",
+   "category": "Peanuts",
+   "skus": "10111, 10112, 10118, 10124, peanut butter, 31601",
+   "origins": [
+    "Argentina",
+    "USA – Southeast",
+    "China"
+   ],
+   "window": "2027 crop",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "El Niño usually brings good rain to Argentina and the US Southeast, which is often positive for peanuts.",
+   "action": "Keep normal cover. This is a line to avoid over-buying.",
+   "crop": 1
+  },
+  {
+   "id": "treenuts",
+   "name": "Almonds, walnuts, pecans, pistachios (California)",
+   "category": "Nuts",
+   "skus": "10601–10685, 30049–30103, 10503",
+   "origins": [
+    "USA – California",
+    "Spain",
+    "Türkiye"
+   ],
+   "window": "2027 crop",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "Strong El Niño winters are often wetter in California, which is neutral to positive. Tight pistachio supply comes from an off-year (about half of 2025), not El Niño. Türkiye's hazelnut crop is comfortable.",
+   "action": "Keep normal cover. Don't treat El Niño as a reason to buy these early.",
+   "crop": 1
+  },
+  {
+   "id": "dates",
+   "name": "Dates (Medjool, Deglet Nour, pitted)",
+   "category": "Dried Fruits",
+   "skus": "10730, 10727, 30038",
+   "origins": [
+    "Tunisia",
+    "USA – California",
+    "Middle East"
+   ],
+   "window": "—",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "Little direct link to El Niño.",
+   "action": "Keep normal cover.",
+   "crop": 1
+  },
+  {
+   "id": "tropexotic",
+   "name": "Dried dragon fruit, sweet potato cubes, jackfruit",
+   "category": "Dried Fruits",
+   "skus": "10717, 14102",
+   "origins": [
+    "Vietnam",
+    "Thailand"
+   ],
+   "window": "Q1–Q3 2027",
+   "cover": "4",
+   "isNew": true,
+   "mechanism": "The Mekong Delta faces drought and saltwater intrusion in the El Niño dry season (Feb–Apr), as in 2016 and 2024.",
+   "action": "Hold 4 months of cover on these 2026 new lines. Ask suppliers about stock levels.",
+   "crop": 3
+  }
+ ],
+ "decisions": [
+  {
+   "line": "Cocoa and chocolate",
+   "cover": "6 months",
+   "decision": "Fix prices through June 2027 now and move Easter orders forward."
+  },
+  {
+   "line": "Brazil nuts",
+   "cover": "9–12 months",
+   "decision": "Buy forward on the good current crop. The 2027/28 crop is at risk from drought during flowering."
+  },
+  {
+   "line": "Coconut (all forms)",
+   "cover": "6 months",
+   "decision": "Buy while origin prices are still flat and ask for fixed-price contracts."
+  },
+  {
+   "line": "Quinoa",
+   "cover": "6 months",
+   "decision": "Buy before Dec–Feb Altiplano rain data and split between Peru and Bolivia."
+  },
+  {
+   "line": "Dried mango, pineapple, papaya",
+   "cover": "5 months",
+   "decision": "Contract 2027 season volumes by January."
+  },
+  {
+   "line": "Cashews",
+   "cover": "4–5 months",
+   "decision": "Hold. Decide on cover past Q2 after the Feb–Mar raw-nut prices."
+  },
+  {
+   "line": "Plantain and banana chips",
+   "cover": "4 months",
+   "decision": "Build stock before January floods on the Peru and Ecuador coast."
+  },
+  {
+   "line": "Rice, sugar items, palm-based items",
+   "cover": "3–4 months",
+   "decision": "Moderate cover only, since supply elsewhere limits price rises."
+  },
+  {
+   "line": "Maple products",
+   "cover": "Through May 2027",
+   "decision": "Confirm 2027 allocations in Q1."
+  },
+  {
+   "line": "Ocean freight (Asia to Montréal)",
+   "cover": "+2 weeks lead time",
+   "decision": "Book Q1 2027 sailings early. Get quotes for both Panama and West Coast-rail routings, and check the Panama surcharges ($130–500/TEU) in each quote."
+  }
+ ],
+ "signals": [
+  {
+   "date": "Mondays",
+   "what": "NOAA CPC weekly ENSO update: Niño 3.4 and 1+2 values. A drop below +2.0°C (relative) before February would mean an early decline."
+  },
+  {
+   "date": "2026-11-12",
+   "what": "NOAA ENSO Diagnostic Discussion, with new strength and peak probabilities. Next one is on 10 December."
+  },
+  {
+   "date": "Thursdays",
+   "what": "Drewry World Container Index: Shanghai → New York and Los Angeles spot rates, and blank sailings."
+  },
+  {
+   "date": "Ongoing",
+   "what": "Carrier surcharge notices (Panama, emergency, bunker) and Suez/Hormuz routing updates from CMA CGM, MSC, Maersk, Hapag-Lloyd and ONE."
+  },
+  {
+   "date": "End of month",
+   "what": "Sea-Intelligence schedule reliability: the October figure comes out in late November."
+  },
+  {
+   "date": "Mid-Nov / mid-Dec",
+   "what": "IRI ENSO plume update: the model-mean peak and the decay timing for MJJ 2027."
+  },
+  {
+   "date": "Weekly",
+   "what": "Côte d'Ivoire port cocoa arrivals compared with last year, and ICE cocoa prices."
+  },
+  {
+   "date": "Dec–Feb",
+   "what": "Harmattan strength in West Africa, the main risk for the 2027 cocoa mid-crop."
+  },
+  {
+   "date": "Dec–Feb",
+   "what": "Rain on the Peru and Bolivia Altiplano (Senamhi), which drives the quinoa crop."
+  },
+  {
+   "date": "~10th monthly",
+   "what": "MPOB Malaysian palm oil stocks and output, plus GAPKI data for Indonesia."
+  },
+  {
+   "date": "Jan 2027",
+   "what": "Panama Canal Authority (ACP) advisories and Gatun Lake level as the dry season starts. Watch for transit-slot cuts."
+  },
+  {
+   "date": "Jan–Mar",
+   "what": "Rain and flood alerts for coastal Peru and Ecuador (plantain, quinoa logistics)."
+  },
+  {
+   "date": "Ongoing",
+   "what": "Indian sugar and rice export-policy announcements, and ISMA production estimates."
+  },
+  {
+   "date": "Feb–Mar",
+   "what": "Québec winter temperatures and the start of the maple sugaring season."
+  }
+ ],
+ "overbuy": "<p><b>Overall risk: moderate.</b> The models agree strongly that El Niño lasts through spring 2027 (100% through MAM). A collapse before the main crop impacts is unlikely. But IRI shows decay starting in MJJ 2027 (60%), and strong El Niños are often followed by La Niña, as in 2016 and 2024. Prices can then fall quickly.</p><ul class='clean'><li><b>Highest over-buying risk:</b> sugar-based items, palm-based items, rice, peanuts and California tree nuts. Other supply (Brazil sugar, Malaysian palm stocks, good US crops) already caps prices on these lines.</li><li><b>Lower risk:</b> cocoa, coconut and Brazil nuts. The crop damage is largely locked in through flowering and the lag, even if El Niño fades early.</li><li><b>Costs of over-cover:</b> shelf life (nuts lose quality after 9–12 months unless chilled), warehouse space, working capital, and paying today's premium if prices ease in H2 2027.</li><li><b>Guardrails:</b> buy in 2–3 tranches rather than all at once. Review cover monthly after each NOAA release. Ask suppliers for price-reopener clauses. Cut targets back to normal if Niño 3.4 (relative) falls below +1.5°C before April 2027.</li></ul>",
+ "routes": [
+  {
+   "name": "Panama Canal (Asia ↔ US/Canada East Coast)",
+   "status": "warn",
+   "label": "Eased, still limited",
+   "text": "The Canal Authority (ACP) raised the Neopanamax draft back to 49 ft on 28 Sept and restored 10 Neopanamax slots on 15 Oct. That's 33 transits a day, against 36 normally. Gatun Lake was 84.7 ft in October, just under the 85 ft comfort level; May–Aug rain was 34% below average. The main risk is the Jan–Apr 2027 dry season: in 2023–24, transits fell from 36 to 18 a day.",
+   "impact": "Carriers charge Panama surcharges of $130–500/TEU on Asia → US East Coast (see table). Allow 1–2 extra weeks on Q1–Q2 2027 bookings and compare with Suez and West Coast-rail options.",
+   "id": "panama"
+  },
+  {
+   "name": "Asia ↔ Canada West Coast + rail (Vancouver, Prince Rupert)",
+   "status": "ok",
+   "label": "Normal",
+   "text": "There's no direct El Niño effect. This is the main backup if Panama tightens, so expect it to fill and get more expensive if Panama capacity falls.",
+   "impact": "Get rail-routing quotes now as a fallback for SE Asia coconut, mango and cashew shipments.",
+   "id": "westcoast"
+  },
+  {
+   "id": "suez",
+   "name": "Suez Canal and Red Sea (Asia, India, Africa ↔ Montréal)",
+   "status": "warn",
+   "label": "Partial return",
+   "text": "Carriers are returning gradually: Gemini moved several Asia–Europe services back through Suez in late September. Suez had 62 transits last week, its highest of 2026, against about 80 a week before the crisis. War-risk insurance is still high, and the Cape of Good Hope route adds 7–14 days.",
+   "impact": "India, Middle East and East Africa cargo may come via Suez or the Cape. Check each booking's routing and allow up to 2 extra weeks."
+  },
+  {
+   "id": "hormuz",
+   "name": "Strait of Hormuz (Persian Gulf)",
+   "status": "bad",
+   "label": "Effectively closed",
+   "text": "Traffic has been largely blocked since 28 Feb 2026, with only 2 vessels transiting in late October. The major container lines suspended Hormuz calls, and war-risk premiums are several times normal. This isn't El Niño related, but it is the biggest shipping disruption this year.",
+   "impact": "Gulf-origin products (UAE dates, Iranian pistachios and saffron) need other routes and supplier checks. Higher fuel costs are passed on as bunker surcharges on every lane."
+  },
+  {
+   "name": "Indonesia, Malaysia, Thailand, Vietnam origin ports",
+   "status": "warn",
+   "label": "Watch",
+   "text": "Drought brings low river levels, smoke from fires and saltwater intrusion in the Mekong. These slow inland barge and truck movement, and smoke can disrupt ports briefly.",
+   "impact": "Expect slower origin handling, especially Feb–Apr 2027.",
+   "id": "seasia"
+  },
+  {
+   "name": "West Africa (Abidjan, San Pedro, Tema)",
+   "status": "ok",
+   "label": "Normal",
+   "text": "Ports are working normally. The risk is the crop, not logistics.",
+   "impact": "No change to lead time.",
+   "id": "westafrica"
+  },
+  {
+   "name": "Peru and Ecuador Pacific coast (Callao, Paita, Guayaquil)",
+   "status": "bad",
+   "label": "High risk Q1 2027",
+   "text": "The extreme coastal El Niño (Niño 1+2 above +4.6°C) points to heavy rain, landslides and road cuts in Jan–Apr 2027, as in 1998 and 2017.",
+   "impact": "Quinoa, plantain and banana-chip shipments could slip 2–4 weeks. Ship before January where you can.",
+   "id": "pacificsa"
+  },
+  {
+   "name": "Bolivia ↔ Arica (Chile) and Amazon rivers",
+   "status": "warn",
+   "label": "Disrupted",
+   "text": "Bolivia has diesel shortages and has had blockades, and Arica is congested. Low Amazon rivers in the dry season slow barge transport.",
+   "impact": "Brazil-nut and Bolivian quinoa lead times are less reliable. Order early.",
+   "id": "bolivia"
+  },
+  {
+   "name": "Southern Brazil and Argentina",
+   "status": "warn",
+   "label": "Flood risk",
+   "text": "El Niño brings heavy rain and flooding to Rio Grande do Sul and northeast Argentina. That's good for crops but can disrupt ports and roads.",
+   "impact": "Minor exposure for Tootsi (peanuts, chia).",
+   "id": "southbrazil"
+  },
+  {
+   "name": "Atlantic and St. Lawrence (Montréal)",
+   "status": "ok",
+   "label": "Favourable",
+   "text": "El Niño usually suppresses Atlantic hurricanes and brings a milder Québec winter, so less St. Lawrence ice is likely.",
+   "impact": "Winter port operations in Montréal should go more smoothly.",
+   "id": "atlantic"
+  },
+  {
+   "name": "Australia and Indian Ocean",
+   "status": "ok",
+   "label": "Calmer seas",
+   "text": "Seas are calmer, but crops are poorer (wheat, macadamia). The positive IOD adds to dryness.",
+   "impact": "Little shipping impact. There's a crop impact on macadamia.",
+   "id": "australia"
+  }
+ ],
+ "sources": [
+  {
+   "t": "NOAA CPC – ENSO Diagnostic Discussion (8 Oct 2026)",
+   "u": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+  },
+  {
+   "t": "NOAA CPC – ENSO weekly update (2 Nov 2026)",
+   "u": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/lanina/enso_evolution-status-fcsts-web.pdf"
+  },
+  {
+   "t": "IRI ENSO Forecast QuickLook (19 Oct 2026)",
+   "u": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/"
+  },
+  {
+   "t": "Trading Economics – Cocoa (Oct 2026)",
+   "u": "https://tradingeconomics.com/commodity/cocoa/news/591579"
+  },
+  {
+   "t": "AllAfrica – El Niño and disease threaten West Africa's cocoa (Sep 2026)",
+   "u": "https://allafrica.com/stories/202609020013.html"
+  },
+  {
+   "t": "Mundus Agri – Desiccated coconuts (Aug 2026)",
+   "u": "https://www.mundus-agri.eu/news/desiccated-coconuts-stable-prices-subdued-trading.n37872.html"
+  },
+  {
+   "t": "Mundus Agri – Brazil nuts crop improves (Aug 2026)",
+   "u": "https://www.mundus-agri.eu/news/brazil-nuts-crop-improves-significantly.n37820.html"
+  },
+  {
+   "t": "Vesper – Bolivia blockades and Brazil nut shipments (Jul 2026)",
+   "u": "https://vespertool.com/news/bolivias-blockades-lift-but-diesel-shortages-keep-brazil-nut-shipments-stuck/"
+  },
+  {
+   "t": "Agência Cenarium – El Niño 2026 Amazon drought (May 2026)",
+   "u": "https://agenciacenarium.com.br/el-nino-2026-may-trigger-a-drought-worse-than-the-2015-drought-in-the-amazon/?lang=en"
+  },
+  {
+   "t": "CMB – Bolivian quinoa and Super Niño risk (Jul 2026)",
+   "u": "https://commodity-board.com/bolivian-quinoa-holds-firm-in-europe-as-super-nino-risk-looms"
+  },
+  {
+   "t": "Vesper – Cashew and pistachio crops (Aug 2026)",
+   "u": "https://vespertool.com/news/smaller-cashew-and-pistachio-crops-meet-a-macadamia-rebound/"
+  },
+  {
+   "t": "Dawn/Reuters – India unlikely to export sugar (Jun 2026)",
+   "u": "https://www.dawn.com/news/2010053"
+  },
+  {
+   "t": "The Star/Reuters – Malaysian palm oil output (30 Oct 2026)",
+   "u": "https://www.thestar.com.my/business/business-news/2026/10/30/timely-rains-cushion-el-nio-blow-to-malaysian-palm-oil-output"
+  },
+  {
+   "t": "CMB – Rice FOB prices (29 Oct 2026)",
+   "u": "https://commodity-board.com/el-nino-keeps-global-rice-on-edge-as-asian-fob-prices-firm"
+  },
+  {
+   "t": "Krungsri Research – Super El Niño drought risk, Thailand (Sep 2026)",
+   "u": "https://www.krungsri.com/en/research/research-intelligence/drought-flood-2026"
+  },
+  {
+   "t": "IAM – Panama Canal tightens draft limits (Aug 2026)",
+   "u": "https://iamovers.org/news/panama-canal-tightens-draft-limits-again-as-el-nino-intensifies"
+  },
+  {
+   "t": "Riviera – Panama Canal draft restrictions (Jul 2026)",
+   "u": "https://www.rivieramm.com/news-content-hub/panama-canal-authority-adds-to-draft-restrictions-in-waterway-in-coming-weeks-89293"
+  },
+  {
+   "t": "Hellenic Shipping News – How El Niño 2026 could reshape shipping (Jul 2026)",
+   "u": "https://www.hellenicshippingnews.com/four-routes-and-a-reprieve-how-el-nino-2026-could-reshape-global-shipping-operations/"
+  },
+  {
+   "t": "Maritime Executive – Panama Canal eases restrictions (28 Sep 2026)",
+   "u": "https://maritime-executive.com/article/panama-canal-eases-restrictions-adding-transit-slot-and-maximum-draft"
+  },
+  {
+   "t": "SLST – Panama Canal draft and transits 2026 (updated 2 Nov 2026)",
+   "u": "https://slstist.com/en/panama-canal-draft-transits-2026/"
+  },
+  {
+   "t": "Supply Chain Dive – Carriers raise Panama fees (Aug 2026)",
+   "u": "https://supplychaindive.com/news/panama-canal-continues-draft-restrictions-ocean-carriers-up-fees/828039"
+  },
+  {
+   "t": "DCN – Drewry World Container Index (29 Oct 2026)",
+   "u": "https://www.thedcn.com.au/news/world-container-index-29-october-2026"
+  },
+  {
+   "t": "Carra Globe – Red Sea carriers return (Sep 2026)",
+   "u": "https://carraglobe.com/red-sea-carrier-return-2026/"
+  },
+  {
+   "t": "Wikipedia – 2026 Strait of Hormuz crisis",
+   "u": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+  },
+  {
+   "t": "Sea-Intelligence – Schedule reliability, September 2026 (28 Oct 2026)",
+   "u": "https://www.sea-intelligence.com/press-room/415-global-schedule-reliability-records-a-marginal-gain-in-september"
+  },
+  {
+   "t": "Kuehne+Nagel – Port operational updates, 21–27 Oct 2026",
+   "u": "https://mykn.kuehne-nagel.com/news/article/port-operational-updates-from-27-10-2026"
+  },
+  {
+   "t": "C.H. Robinson – Ocean freight market update (Oct 2026)",
+   "u": "https://www.chrobinson.com/en-sg/resources/insights-and-advisories/north-america-freight-insights/oct-2026-freight-market-update/ocean/"
+  }
+ ],
+ "originLib": {
+  "Côte d'Ivoire": {
+   "region": "West Africa",
+   "risk": 5,
+   "window": "Dec 2026–Sep 2027",
+   "effect": "Harsher Harmattan and below-average rain hurt cocoa pod setting (mid-crop) and cashew flowering.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Ghana": {
+   "region": "West Africa",
+   "risk": 5,
+   "window": "Dec 2026–Sep 2027",
+   "effect": "Below-average rain and a strong Harmattan; Ghana's cocoa estimate is already down 13%.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Nigeria": {
+   "region": "West Africa",
+   "risk": 4,
+   "window": "Dec 2026–Jun 2027",
+   "effect": "Drier dry season; cocoa, cashew and sesame yields at risk.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Tanzania": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "Oct 2026–Jan 2027",
+   "effect": "El Niño usually brings above-normal short rains: good for crops, but harvest and road delays.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Kenya": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "Oct 2026–Jan 2027",
+   "effect": "Wetter short-rains season; flooding risk rather than drought.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Ethiopia": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "2027 season",
+   "effect": "Mixed: wetter in the south, possible drought in the north next summer.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Sudan": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "2027 season",
+   "effect": "Weak link; rainy-season risk in summer 2027.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Malawi": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "El Niño dries southern Africa during the rainy season; flowering stress.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Mozambique": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "Drier rainy season in the south.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "South Africa": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "Summer drought and heat are typical in strong El Niño years.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "India": {
+   "region": "South Asia",
+   "risk": 4,
+   "window": "Now–Q3 2027",
+   "effect": "The 2026 monsoon was weak; export bans (sugar, possibly rice) are a policy risk.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Pakistan": {
+   "region": "South Asia",
+   "risk": 3,
+   "window": "Now–Q2 2027",
+   "effect": "Water stress for rice; follows Indian export policy.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Sri Lanka": {
+   "region": "South Asia",
+   "risk": 3,
+   "window": "Q1–Q3 2027",
+   "effect": "Drier conditions hurt coconut yields with a lag.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Thailand": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q1–Q3 2027",
+   "effect": "Krungsri expects rainfall 10–13% below normal; fruit, rice, cane and palm are at risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Vietnam": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Feb–Jun 2027",
+   "effect": "Mekong Delta drought and saltwater intrusion in the dry season (as in 2016 and 2024).",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Philippines": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q2 2027–Q1 2028",
+   "effect": "Below-normal rain in coconut areas (PAGASA); coconut yields fall 6–12 months later.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Indonesia": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q2 2027–Q1 2028",
+   "effect": "Drought plus a positive Indian Ocean Dipole; palm, coconut and spice yields fall with a lag; fire and smoke risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Malaysia": {
+   "region": "SE Asia",
+   "risk": 3,
+   "window": "Mar–May 2027",
+   "effect": "Timely rains cushion the impact so far; peak impact expected in Mar–May 2027.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Cambodia": {
+   "region": "SE Asia",
+   "risk": 3,
+   "window": "Q1–Q2 2027",
+   "effect": "Mekong drought risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "China": {
+   "region": "East Asia",
+   "risk": 2,
+   "window": "2027",
+   "effect": "Mixed regional effects; a weak overall link.",
+   "routes": [
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Japan": {
+   "region": "East Asia",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Australia": {
+   "region": "Oceania",
+   "risk": 3,
+   "window": "Spring 2026–2027",
+   "effect": "Drier east and south with a positive IOD; calmer seas.",
+   "routes": [
+    "australia",
+    "panama"
+   ]
+  },
+  "Peru – coast": {
+   "region": "South America Pacific",
+   "risk": 5,
+   "window": "Jan–Apr 2027",
+   "effect": "Extreme coastal El Niño (Niño 1+2 above +4.6°C): heavy rain, floods, road and port disruption.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Peru – Altiplano": {
+   "region": "Andes",
+   "risk": 4,
+   "window": "Oct 2026–Jun 2027",
+   "effect": "Altiplano drought in the growing season; Senamhi warns of severe drought in Puno through 2027.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Peru – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "Amazon drought during Brazil-nut flowering; low rivers.",
+   "routes": [
+    "bolivia",
+    "pacificsa"
+   ]
+  },
+  "Bolivia – Altiplano": {
+   "region": "Andes",
+   "risk": 4,
+   "window": "Oct 2026–Jun 2027",
+   "effect": "Reduced rainfall and drought risk for quinoa; blockades and diesel shortages.",
+   "routes": [
+    "bolivia",
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Bolivia – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "Drought during flowering cuts the next Brazil-nut crop; fires and low rivers.",
+   "routes": [
+    "bolivia",
+    "atlantic"
+   ]
+  },
+  "Brazil – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "INPE warns the Amazon drought could match or beat 2015.",
+   "routes": [
+    "bolivia",
+    "atlantic"
+   ]
+  },
+  "Brazil – South": {
+   "region": "South America Atlantic",
+   "risk": 2,
+   "window": "Oct 2026–Mar 2027",
+   "effect": "Heavy rain and floods in Rio Grande do Sul; good for crops but bad for logistics.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Ecuador": {
+   "region": "South America Pacific",
+   "risk": 5,
+   "window": "Jan–Apr 2027",
+   "effect": "Coastal floods and landslides around Guayaquil (as in 1998 and 2017).",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Colombia": {
+   "region": "South America Pacific",
+   "risk": 3,
+   "window": "Dec 2026–Apr 2027",
+   "effect": "El Niño usually dries the Andes and Caribbean regions.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Paraguay": {
+   "region": "South America Atlantic",
+   "risk": 2,
+   "window": "Oct 2026–Apr 2027",
+   "effect": "Above-normal rain: helps yields but risks floods and harvest delays.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Argentina": {
+   "region": "South America Atlantic",
+   "risk": 1,
+   "window": "Oct 2026–Apr 2027",
+   "effect": "El Niño usually brings beneficial rain to the Pampas.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Chile": {
+   "region": "South America Pacific",
+   "risk": 1,
+   "window": "Winter 2027",
+   "effect": "Wetter central Chile; low risk.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Mexico": {
+   "region": "North America",
+   "risk": 2,
+   "window": "2027",
+   "effect": "Drier south in summer; a weak overall link.",
+   "routes": []
+  },
+  "USA – California": {
+   "region": "North America",
+   "risk": 1,
+   "window": "Winter 2026/27",
+   "effect": "Often a wetter winter; neutral to positive.",
+   "routes": []
+  },
+  "USA – Southeast": {
+   "region": "North America",
+   "risk": 1,
+   "window": "Winter 2026/27",
+   "effect": "Wetter winter; positive for peanuts.",
+   "routes": []
+  },
+  "Canada – Québec": {
+   "region": "North America",
+   "risk": 3,
+   "window": "Mar–Apr 2027",
+   "effect": "Milder winter can shorten or disrupt the maple freeze–thaw season.",
+   "routes": []
+  },
+  "Canada – Prairies": {
+   "region": "North America",
+   "risk": 2,
+   "window": "Winter 2026/27",
+   "effect": "Warmer, drier winter; low soil moisture risk for spring.",
+   "routes": []
+  },
+  "Spain": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Türkiye": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Bulgaria": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Tunisia": {
+   "region": "North Africa",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Middle East": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "hormuz",
+    "suez"
+   ]
+  },
+  "Iran": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak El Niño link; shipping is blocked by the Hormuz crisis.",
+   "routes": [
+    "hormuz"
+   ]
+  },
+  "UAE": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak El Niño link; Gulf ports are affected by the Hormuz crisis.",
+   "routes": [
+    "hormuz"
+   ]
+  }
+ },
+ "live": {
+  "url": "tootsi-enso-data.json",
+  "refreshMinutes": 30
+ },
+ "freight": {
+  "asOf": "2026-10-29",
+  "source": "Drewry World Container Index",
+  "next": "Every Thursday",
+  "items": [
+   {
+    "k": "WCI composite",
+    "v": 4429,
+    "chg": -3
+   },
+   {
+    "k": "Shanghai → New York",
+    "v": 9631,
+    "chg": -5
+   },
+   {
+    "k": "Shanghai → Los Angeles",
+    "v": 7514,
+    "chg": -6
+   },
+   {
+    "k": "Shanghai → Rotterdam",
+    "v": 3686,
+    "chg": 1
+   }
+  ],
+  "note": "US$ per 40 ft container, spot. Transpacific rates are falling: Drewry expects another drop next week, with 6 blank (cancelled) sailings announced. Rates are still more than double their late-2025 level of about $1,850, mainly because of the Hormuz crisis and Panama limits."
+ },
+ "carriers": [
+  {
+   "carrier": "CMA CGM",
+   "type": "Surcharge",
+   "detail": "Panama Canal Adjustment Factor: $500/TEU",
+   "lanes": "Far East → US East and Gulf Coast",
+   "effective": "2026-09-10",
+   "status": "bad"
+  },
+  {
+   "carrier": "MSC",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $149/TEU, $297/40 ft, $376/45 ft",
+   "lanes": "SE Asia, China, Korea, Japan → US East and Gulf Coast",
+   "effective": "2026-09-12",
+   "status": "warn"
+  },
+  {
+   "carrier": "ONE",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $150/TEU",
+   "lanes": "Transpacific eastbound",
+   "effective": "2026-08-10",
+   "status": "warn"
+  },
+  {
+   "carrier": "Hapag-Lloyd",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $130/TEU",
+   "lanes": "Far East → North America",
+   "effective": "2026-08-15",
+   "status": "warn"
+  },
+  {
+   "carrier": "Maersk",
+   "type": "Surcharge",
+   "detail": "No Panama surcharge published as of late August. Check before booking.",
+   "lanes": "Asia → North America",
+   "effective": "—",
+   "status": "ok"
+  },
+  {
+   "carrier": "Gemini (Maersk + Hapag-Lloyd)",
+   "type": "Routing",
+   "detail": "AE11, AE5 and ME2 back through Suez from 19–24 Sept, and the ME1 India–Europe service too. AE12 is not dated yet.",
+   "lanes": "Asia, India → Europe and Mediterranean",
+   "effective": "2026-09-19",
+   "status": "ok"
+  },
+  {
+   "carrier": "Maersk, CMA CGM, Hapag-Lloyd",
+   "type": "Suspension",
+   "detail": "Strait of Hormuz transits suspended since late Feb 2026. Gulf cargo moves via other ports and feeders.",
+   "lanes": "Persian Gulf (UAE, Iran, Qatar, Kuwait)",
+   "effective": "2026-02-28",
+   "status": "bad"
+  },
+  {
+   "carrier": "Transpacific carriers",
+   "type": "Blank sailings",
+   "detail": "6 sailings cancelled next week (up from 5) as US imports drop about 11% in November.",
+   "lanes": "Asia → North America",
+   "effective": "2026-11-02",
+   "status": "warn"
+  }
+ ],
+ "reliability": {
+  "asOf": "2026-09",
+  "source": "Sea-Intelligence GLP (28 Oct 2026)",
+  "global": 50.6,
+  "globalChg": 0.9,
+  "avgDelay": 6.65,
+  "note": "Only half of vessels arrive on time. Late ships average 6.65 days behind schedule. Reliability fell from 64.5% in May, and none of the top-13 carriers improved on last year. Port congestion ties up about 12% of global ship capacity, a four-year high.",
+  "carriers": [
+   {
+    "c": "Maersk",
+    "p": 64.8
+   },
+   {
+    "c": "Hapag-Lloyd",
+    "p": 60.4
+   },
+   {
+    "c": "MSC",
+    "p": 57.7
+   },
+   {
+    "c": "CMA CGM",
+    "p": 51.8
+   },
+   {
+    "c": "Wan Hai",
+    "p": 26.7
+   }
+  ],
+  "alliances": [
+   {
+    "c": "MSC (stand-alone)",
+    "p": 68.9
+   },
+   {
+    "c": "Gemini (Maersk + Hapag)",
+    "p": 68.4
+   },
+   {
+    "c": "Ocean Alliance (CMA CGM, COSCO, Evergreen, OOCL)",
+    "p": 44.8
+   },
+   {
+    "c": "Premier Alliance (ONE, HMM, Yang Ming)",
+    "p": 41.5
+   }
+  ]
+ },
+ "rollovers": [
+  {
+   "lane": "India → North America",
+   "level": "bad",
+   "text": "High rollover risk and longer booking lead times. Transhipment problems at Colombo, with congestion at Nhava Sheva and Mundra.",
+   "action": "Book 3–4 weeks ahead and ask for direct services or confirmed connections."
+  },
+  {
+   "lane": "Asia → North America (Transpacific)",
+   "level": "warn",
+   "text": "Blank sailings (6 next week) take capacity out, and cargo from cancelled sailings rolls to the next vessel. The first sailings after holidays are most exposed.",
+   "action": "Confirm the vessel 7 days before cut-off. Avoid the first sailing after Chinese New Year (Feb 2027)."
+  },
+  {
+   "lane": "Vietnam (Cai Mep / Vung Tau)",
+   "level": "warn",
+   "text": "Berth congestion is up to 4 days for off-window vessels, and yards are above 90% full. Missed connections lead to rolls.",
+   "action": "Allow 1 extra week for Vietnamese cashews, dried fruit and pepper."
+  },
+  {
+   "lane": "Africa (Tema, Abidjan, Durban)",
+   "level": "bad",
+   "text": "Average waits: Tema 7.6 days, Abidjan 5 days, Durban 7.3 days (DGT anchorage 10.5 days). Port omissions leave cargo waiting for the next call.",
+   "action": "Add 1–2 weeks to West African cocoa, cashew and sesame, and South African macadamia. Check the omission notices."
+  },
+  {
+   "lane": "Canada West Coast (Vancouver, Prince Rupert)",
+   "level": "warn",
+   "text": "Vessel bunching is pushing delays into the rail network. Rail dwell is about 5–6 days at Vancouver.",
+   "action": "If you reroute from Panama to West Coast rail, allow 1 more week inland."
+  },
+  {
+   "lane": "Europe → Montréal (transatlantic)",
+   "level": "ok",
+   "text": "Space into the US and Canadian East Coast is gradually opening up. Rotterdam and Antwerp waits are about 1.3 days.",
+   "action": "Normal lead times."
+  }
+ ],
+ "ports": [
+  {
+   "port": "Tema (Ghana)",
+   "wait": 7.56,
+   "note": "Cocoa, cashew, sesame"
+  },
+  {
+   "port": "Durban (South Africa)",
+   "wait": 7.29,
+   "note": "DGT anchorage 10.5 days"
+  },
+  {
+   "port": "Abidjan (Côte d'Ivoire)",
+   "wait": 5.0,
+   "note": "Cocoa, cashew"
+  },
+  {
+   "port": "Genoa",
+   "wait": 2.5,
+   "note": ""
+  },
+  {
+   "port": "Colombo (Sri Lanka)",
+   "wait": 1.89,
+   "note": "Transhipment hub for India; omissions"
+  },
+  {
+   "port": "Shanghai",
+   "wait": 1.65,
+   "note": ""
+  },
+  {
+   "port": "Vung Tau / Cai Mep (Vietnam)",
+   "wait": 1.5,
+   "note": "Up to 4 days off-window; yard >90%"
+  },
+  {
+   "port": "Qingdao",
+   "wait": 1.42,
+   "note": ""
+  },
+  {
+   "port": "Rotterdam",
+   "wait": 1.36,
+   "note": "MVII yard 99%"
+  },
+  {
+   "port": "Savannah",
+   "wait": 1.3,
+   "note": "Chassis shortages"
+  },
+  {
+   "port": "Singapore",
+   "wait": 1.18,
+   "note": ""
+  },
+  {
+   "port": "New York / New Jersey",
+   "wait": 1.08,
+   "note": ""
+  },
+  {
+   "port": "Laem Chabang (Thailand)",
+   "wait": 1.0,
+   "note": ""
+  }
+ ],
+ "portsAsOf": "21–27 Oct 2026 · Kuehne+Nagel (7-day average vessel wait). Above 2 days = slightly disrupted, above 4 days = heavily disrupted."
+}

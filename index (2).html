@@ -1,0 +1,2039 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tootsi El Niño Desk</title>
+<style>
+:root{
+  --bg:#f6f4ef;--surface:#ffffff;--surface2:#f0ede6;--ink:#1d1b18;--muted:#6b665d;--line:#e2ddd2;
+  --accent:#b4471f;--accent-ink:#ffffff;--ok:#2f7d4f;--warn:#b7791f;--bad:#b4351f;--info:#2a5f8f;
+  --s1:#e8f1ea;--s2:#eef3e2;--s3:#fbf0d9;--s4:#fbe2d2;--s5:#f6d0c8;
+  --radius:12px;--shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15140f;--surface:#1e1c17;--surface2:#26241e;--ink:#efebe2;--muted:#a59f93;--line:#35322a;
+  --accent:#e0683b;--accent-ink:#15140f;--ok:#5cb57f;--warn:#e0a84a;--bad:#e46a52;--info:#6ea6d8;
+  --s1:#1f3326;--s2:#283320;--s3:#3a3020;--s4:#42291c;--s5:#4a2420;--shadow:none;}}
+:root[data-theme="dark"]{
+  --bg:#15140f;--surface:#1e1c17;--surface2:#26241e;--ink:#efebe2;--muted:#a59f93;--line:#35322a;
+  --accent:#e0683b;--accent-ink:#15140f;--ok:#5cb57f;--warn:#e0a84a;--bad:#e46a52;--info:#6ea6d8;
+  --s1:#1f3326;--s2:#283320;--s3:#3a3020;--s4:#42291c;--s5:#4a2420;--shadow:none;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--info)}
+h1,h2,h3{line-height:1.2;margin:0 0 .5rem}
+h2{font-size:1.25rem;margin-top:.25rem}
+h3{font-size:1rem}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 64px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.2px}
+.brand small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;font:inherit;font-size:.88rem}
+nav.tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 14px;border-radius:8px;cursor:pointer;font:inherit;font-size:.9rem}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.small{padding:4px 10px;font-size:.82rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+@media (max-width:520px){.g4{grid-template-columns:1fr}}
+.kpi .label{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+.kpi .val{font-size:2rem;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi .sub{color:var(--muted);font-size:.85rem}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.78rem;font-weight:600;border:1px solid currentColor}
+.pill.bad{color:var(--bad)}.pill.warn{color:var(--warn)}.pill.ok{color:var(--ok)}.pill.info{color:var(--info)}
+.muted{color:var(--muted)}
+.section{margin-top:26px}
+.hero{margin-top:18px;display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.hero .status{flex:1 1 420px}
+.hero h1{font-size:1.6rem}
+.bars{display:grid;gap:6px}
+.bar{display:grid;grid-template-columns:90px 1fr 46px;align-items:center;gap:8px;font-size:.85rem}
+.bar .track{height:14px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:4px}
+.bar .fill.neutral{background:var(--muted)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.9rem}
+th{font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);cursor:pointer;white-space:nowrap;background:var(--surface)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.sens{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:26px;border-radius:6px;font-weight:700}
+.sens.s1{background:var(--s1)}.sens.s2{background:var(--s2)}.sens.s3{background:var(--s3)}.sens.s4{background:var(--s4)}.sens.s5{background:var(--s5)}
+tr.detail td{background:var(--surface2);font-size:.88rem}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--surface2)}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:1px 6px;border-radius:4px;background:var(--accent);color:var(--accent-ink);margin-left:6px;vertical-align:middle}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;max-width:100%}
+textarea{width:100%;min-height:70px}
+label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:3px}
+.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.form .full{grid-column:1/-1}
+.form input,.form select{width:100%}
+@media (max-width:640px){.form{grid-template-columns:1fr}}
+ul.clean{margin:.25rem 0 0;padding-left:1.1rem}
+ul.clean li{margin:.25rem 0}
+.timeline{display:grid;gap:8px}
+.tl{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.tl b{font-variant-numeric:tabular-nums}
+.route{border-left:4px solid var(--muted)}
+.route.bad{border-left-color:var(--bad)}.route.warn{border-left-color:var(--warn)}.route.ok{border-left-color:var(--ok)}
+.notice{padding:10px 14px;border-radius:10px;background:var(--surface2);border:1px solid var(--line);font-size:.88rem}
+#login{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:50;padding:16px}
+#login .card{width:100%;max-width:380px}
+#login input{width:100%;margin-bottom:12px}
+#login .err{color:var(--bad);font-size:.85rem;min-height:1.2em}
+body.locked #app{display:none}
+body:not(.locked) #login{display:none}
+.hide{display:none!important}
+.foot{margin-top:40px;color:var(--muted);font-size:.8rem}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;margin:2px 4px 2px 0;border-radius:999px;font-size:.78rem;border:1px solid var(--line);background:var(--surface)}
+.chip i{font-style:normal;font-weight:700;border-radius:4px;padding:0 4px;font-size:.72rem}
+.chip i.s1{background:var(--s1)}.chip i.s2{background:var(--s2)}.chip i.s3{background:var(--s3)}.chip i.s4{background:var(--s4)}.chip i.s5{background:var(--s5)}
+.chip.unrated{border-style:dashed;color:var(--warn)}
+.chip button{border:0;background:none;color:var(--muted);cursor:pointer;font-size:.9rem;padding:0 0 0 2px;line-height:1}
+.oedit{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.onote{margin:2px 0;font-size:.86rem}
+.calc{font-size:.8rem;color:var(--muted)}
+@media print{header.top,nav.tabs,#adminTab,.btn{display:none!important}.panel{display:block!important}}
+</style>
+</head>
+<body class="locked">
+
+<div id="login">
+  <form class="card" id="loginForm" autocomplete="on">
+    <h2>Tootsi Impex · El Niño Risk Desk</h2>
+    <p class="muted" style="margin-top:0">Purchasing department access</p>
+    <label for="u">Username</label>
+    <input id="u" name="username" autocomplete="username" required>
+    <label for="p">Password</label>
+    <input id="p" name="password" type="password" autocomplete="current-password" required>
+    <div class="err" id="loginErr"></div>
+    <button class="btn primary" type="submit" style="width:100%">Sign in</button>
+  </form>
+</div>
+
+<div id="app">
+<header class="top"><div class="wrap">
+  <div class="brand">Tootsi Impex · El Niño Risk Desk<small><span id="updatedLine"></span> · <span id="liveStatus"></span></small></div>
+  <nav class="tabs" id="tabs">
+    <button data-tab="overview" class="on">Overview</button>
+    <button data-tab="brief">Buying brief</button>
+    <button data-tab="products">Products</button>
+    <button data-tab="shipping">Shipping</button>
+    <button data-tab="sources">Sources</button>
+    <button data-tab="admin" id="adminTab" class="hide">Admin</button>
+    <button id="logout" title="Sign out">Sign out</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<!-- OVERVIEW -->
+<section class="panel" data-panel="overview">
+  <div class="hero">
+    <div class="status">
+      <span class="pill bad" id="alertPill"></span>
+      <h1 id="headline" style="margin-top:8px"></h1>
+      <p class="muted" id="synopsis" style="margin:0"></p>
+    </div>
+  </div>
+  <div class="grid g4 section" id="kpis"></div>
+  <div class="grid g2 section">
+    <div class="card">
+      <h3>IRI chance of El Niño, by season</h3>
+      <div class="bars" id="seasonBars"></div>
+      <p class="muted" style="font-size:.8rem;margin-bottom:0">Grey bar = ENSO-neutral is the most likely outcome that season.</p>
+    </div>
+    <div class="card">
+      <h3>Strength probabilities (NOAA CPC)</h3>
+      <div class="bars" id="strengthBars"></div>
+      <p class="muted" id="strengthNote" style="font-size:.85rem;margin-bottom:0"></p>
+    </div>
+  </div>
+  <div class="card section">
+    <h3>Outlook</h3>
+    <ul class="clean" id="outlook"></ul>
+  </div>
+  <div class="grid g3 section" id="topRisks"></div>
+</section>
+
+<!-- BRIEF -->
+<section class="panel hide" data-panel="brief">
+  <h2 class="section">Buying brief</h2>
+  <p class="muted" id="briefDate" style="margin-top:0"></p>
+  <div class="card">
+    <h3>Decisions this month</h3>
+    <div class="tablewrap" style="border:0"><table id="decisions"><thead><tr><th>Line</th><th>Cover target</th><th>Decision</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <div class="section">
+    <h3>Signals to watch, next 90 days</h3>
+    <div class="timeline" id="signals"></div>
+  </div>
+  <div class="card section">
+    <h3>Risk of over-buying if El Niño weakens early</h3>
+    <div id="overbuy"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="panel hide" data-panel="products">
+  <h2 class="section">Product watchlist</h2>
+  <p class="muted" style="margin-top:0">Click a row for the mechanism, the effect at each origin, and the recommended action. Risk 1 = minimal, 5 = severe. Risk is calculated from how sensitive the crop is, how exposed its origins are, and the current strength of El Niño.</p>
+  <p class="notice" id="intensityNote" style="margin:0 0 6px"></p>
+  <div class="notice hide" id="viewerChanges" style="margin:0 0 6px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <span style="flex:1 1 300px">You've changed origins on this computer. Only you can see these changes. To share them, send the change file to the admin.</span>
+    <button class="btn small primary" id="exportOriginChanges">Export origin changes</button>
+    <button class="btn small" id="undoOriginChanges">Undo my changes</button>
+  </div>
+  <div class="filters">
+    <input id="q" placeholder="Search product, origin, SKU..." style="flex:1 1 220px">
+    <select id="fCat"><option value="">All categories</option></select>
+    <select id="fSens"><option value="0">Any sensitivity</option><option value="3">3 and up</option><option value="4">4 and up</option><option value="5">5 only</option></select>
+  </div>
+  <div class="tablewrap"><table id="ptable"><thead><tr>
+    <th data-k="name">Product line</th><th data-k="category">Category</th><th data-k="origins">Origins</th>
+    <th data-k="sensitivity">Risk</th><th data-k="window">Impact window</th><th data-k="cover">Cover</th>
+  </tr></thead><tbody></tbody></table></div>
+  <p class="muted" style="font-size:.8rem">Origins are typical sourcing countries. Anyone signed in can add or remove origins in a row's details to match your real suppliers. Risk, origin notes and shipping routes then update automatically. Only an admin can rate a new origin or publish changes for everyone.</p>
+</section>
+
+<!-- SHIPPING -->
+<section class="panel hide" data-panel="shipping">
+  <h2 class="section">Shipping and logistics, worldwide</h2>
+  <p class="muted" style="margin-top:0">Freight rates, shipping-line notices, rollovers, port delays, and how El Niño and other disruptions affect the routes that serve Montréal.</p>
+
+  <h3 class="section">Spot freight rates</h3>
+  <div class="grid g4" id="freightKpis"></div>
+  <p class="muted" id="freightNote" style="font-size:.85rem"></p>
+
+  <h3 class="section">Schedule reliability and delays</h3>
+  <div class="grid g2">
+    <div class="card">
+      <div class="kpi"><div class="label">Ships on time, worldwide</div><div class="val" id="relGlobal"></div><div class="sub" id="relSub"></div></div>
+      <p style="font-size:.88rem" id="relNote"></p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:.9rem">On-time % by carrier and alliance</h3>
+      <div class="bars" id="relBars"></div>
+    </div>
+  </div>
+
+  <h3 class="section">Rollover and delay risk by lane</h3>
+  <div class="grid g2" id="rollovers"></div>
+
+  <h3 class="section">Port waiting times</h3>
+  <div class="tablewrap"><table id="portTable"><thead><tr><th>Port</th><th>Avg vessel wait</th><th>Status</th><th>Note</th></tr></thead><tbody></tbody></table></div>
+  <p class="muted" id="portsAsOf" style="font-size:.8rem"></p>
+
+  <h3 class="section">Shipping-line notices: surcharges, routings, suspensions</h3>
+  <div class="tablewrap"><table id="carrierTable"><thead><tr><th>Carrier</th><th>Type</th><th>Detail</th><th>Lanes</th><th>Effective</th></tr></thead><tbody></tbody></table></div>
+
+  <h3 class="section">Routes and chokepoints</h3>
+  <div class="grid g2" id="routes"></div>
+</section>
+
+<!-- SOURCES -->
+<section class="panel hide" data-panel="sources">
+  <h2 class="section">Sources</h2>
+  <ul class="clean" id="sourceList"></ul>
+</section>
+
+<!-- ADMIN -->
+<section class="panel hide" data-panel="admin">
+  <h2 class="section">Admin: update the desk</h2>
+  <div class="notice">Changes you make here are saved only in this browser. To share them, click <b>Download updated dashboard</b> and replace the shared file. Everyone who opens the new file sees the update.</div>
+
+  <div class="card section">
+    <h3>ENSO reading</h3>
+    <div class="form" id="ensoForm"></div>
+    <div style="margin-top:12px"><button class="btn primary" id="saveEnso">Save ENSO reading</button></div>
+  </div>
+
+  <div class="card section">
+    <h3 id="pfTitle">Add a product line</h3>
+    <form class="form" id="pform">
+      <input type="hidden" id="pf_id">
+      <div><label>Product line</label><input id="pf_name" required></div>
+      <div><label>Category</label><select id="pf_category"></select></div>
+      <div><label>Tootsi SKUs (optional)</label><input id="pf_skus" placeholder="e.g. 10203, 10212"></div>
+      <div><label>Origins (comma-separated, pick from the origin library)</label><input id="pf_origins" list="originList" required placeholder="e.g. Vietnam, Côte d'Ivoire"></div>
+      <div><label>Crop sensitivity to weather (1-5)</label><input id="pf_crop" type="number" min="1" max="5" value="3" required></div>
+      <div><label>Impact window</label><input id="pf_window" placeholder="e.g. Q2–Q3 2027"></div>
+      <div><label>Cover target (months)</label><input id="pf_cover" placeholder="e.g. 4–5"></div>
+      <div><label>Flag as new</label><select id="pf_isNew"><option value="false">No</option><option value="true">Yes</option></select></div>
+      <div class="full"><label>Mechanism</label><textarea id="pf_mechanism"></textarea></div>
+      <div class="full"><label>Action</label><textarea id="pf_action"></textarea></div>
+      <div class="full"><button class="btn primary" type="submit">Save product</button> <button class="btn" type="button" id="pfReset">Clear form</button></div>
+    </form>
+    <h3 class="section">Existing lines</h3>
+    <div class="tablewrap"><table id="adminList"><tbody></tbody></table></div>
+  </div>
+
+  <div class="card section">
+    <h3>Live updates</h3>
+    <p class="muted" style="margin-top:0">The dashboard re-reads its data file at the address below every few minutes, and everyone who has it open sees the new data without reloading. This works when the dashboard is hosted (SharePoint, intranet, website), or when the address is a full https link that allows browser access.</p>
+    <div class="form">
+      <div class="full"><label>Data file address (relative name or full https link)</label><input id="liveUrl"></div>
+      <div><label>Check every (minutes)</label><input id="liveMin" type="number" min="1" max="1440"></div>
+      <div style="align-self:end"><button class="btn primary" id="saveLive">Save and check now</button></div>
+    </div>
+    <p class="muted" id="liveDetail" style="font-size:.85rem"></p>
+  </div>
+
+  <div class="card section">
+    <h3>Shipping data</h3>
+    <p class="muted" style="margin-top:0">Edit freight rates, reliability, rollover risk, port waits and shipping-line notices. The data is in JSON format: keep the quotes and commas, then click Save.</p>
+    <select id="shipKey"><option value="freight">Freight rates</option><option value="carriers">Shipping-line notices</option><option value="rollovers">Rollover risk by lane</option><option value="ports">Port waiting times</option><option value="reliability">Schedule reliability</option><option value="routes">Routes and chokepoints</option></select>
+    <textarea id="shipJson" style="min-height:260px;font-family:ui-monospace,Menlo,monospace;font-size:.8rem;margin-top:8px"></textarea>
+    <div style="margin-top:8px"><button class="btn primary" id="saveShip">Save shipping data</button> <span id="shipErr" style="color:var(--bad);font-size:.85rem"></span></div>
+  </div>
+
+  <div class="card section">
+    <h3>Origin library</h3>
+    <p class="muted" style="margin-top:0">Each origin has an El Niño exposure (1–5), an impact window, a short effect note and the shipping routes it uses. Changing an origin here updates every product sourced from it.</p>
+    <div class="notice hide" id="unratedNote" style="margin-bottom:10px"></div>
+    <form class="form" id="oform">
+      <div><label>Origin name</label><input id="of_name" list="originList" required placeholder="e.g. Peru – coast"></div>
+      <div><label>Region</label><input id="of_region" placeholder="e.g. South America Pacific"></div>
+      <div><label>El Niño exposure (1-5)</label><input id="of_risk" type="number" min="1" max="5" value="3" required></div>
+      <div><label>Impact window</label><input id="of_window" placeholder="e.g. Jan–Apr 2027"></div>
+      <div class="full"><label>Effect at this origin</label><textarea id="of_effect" style="min-height:50px"></textarea></div>
+      <div class="full"><label>Shipping routes used</label><div id="of_routes" style="display:flex;flex-wrap:wrap;gap:4px 14px"></div></div>
+      <div class="full"><button class="btn primary" type="submit">Save origin</button> <button class="btn" type="button" id="ofReset">Clear form</button></div>
+    </form>
+    <div class="tablewrap section"><table id="originTable"><thead><tr><th>Origin</th><th>Region</th><th>Exposure</th><th>Window</th><th>Used by</th><th></th></tr></thead><tbody></tbody></table></div>
+  </div>
+
+  <div class="card section">
+    <h3>Publish and back up</h3>
+    <p class="muted" style="margin-top:0">Download a single HTML file that has all your changes built in, or move the data in and out as JSON.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" id="dlHtml">Download updated dashboard</button>
+      <button class="btn" id="dlJson">Export data (JSON)</button>
+      <label class="btn" style="margin:0;color:var(--ink)">Import data (JSON)<input type="file" id="upJson" accept=".json,application/json" class="hide"></label>
+      <button class="btn" id="resetLocal">Discard local changes</button>
+    </div>
+    <p class="muted" style="font-size:.85rem">When the dashboard is hosted on a web server, it also reads a file named <code>tootsi-enso-data.json</code> in the same folder, if one is there. Replacing that file updates the dashboard for everyone with no other step.</p>
+  </div>
+
+  <div class="card section">
+    <h3>Change a password</h3>
+    <p class="muted" style="margin-top:0">Generates a new access code. Paste it into the <code>USERS</code> block near the bottom of the file, or send it to Claude to rebuild the file.</p>
+    <div class="form">
+      <div><label>Username</label><input id="cu"></div>
+      <div><label>New password</label><input id="cp" type="password"></div>
+      <div class="full"><button class="btn" id="genHash">Generate</button> <code id="hashOut" style="word-break:break-all"></code></div>
+    </div>
+  </div>
+</section>
+
+<datalist id="originList"></datalist>
+<p class="foot">Prepared for Tootsi Impex purchasing. This is decision support, not a forecast guarantee. Check prices and terms with suppliers before committing.</p>
+</main>
+</div>
+
+<!--DATA-START-->
+<script id="desk-data" type="application/json">
+{
+ "updated": "2026-11-05",
+ "enso": {
+  "asOf": "2026-11-04",
+  "alertStatus": "El Niño Advisory",
+  "headline": "Very strong El Niño, still strengthening",
+  "synopsis": "El Niño continues to strengthen. NOAA puts the chance of a strong-to-very strong event through January–March 2027 above 83%. The peak is expected in November–December 2026.",
+  "nino34_cpc_weekly": 2.5,
+  "nino34_cpc_weekly_date": "2026-11-02",
+  "nino34_iri_weekly": 3.3,
+  "nino34_iri_weekly_date": "2026-10-14",
+  "nino34_monthly_sep": 2.84,
+  "nino12_cpc_weekly": 4.6,
+  "roni_latest": 1.7,
+  "roni_season": "JAS 2026",
+  "cpc_last_discussion": "2026-10-08",
+  "next_noaa_release": "2026-11-12",
+  "baseNote": "NOAA's weekly figure is lower than IRI's. The two use different baselines: NOAA's official index is now the relative index (RONI), while IRI reports the traditional Niño 3.4.",
+  "strength": [
+   {
+    "label": "SON 2026",
+    "p": 54,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "OND 2026",
+    "p": 83,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "NDJ 2026/27",
+    "p": 70,
+    "desc": "RONI ≥ +2.5°C"
+   },
+   {
+    "label": "Through JFM 2027",
+    "p": 83,
+    "desc": "Strong-to-very strong (>83%)"
+   }
+  ],
+  "strengthNote": "+2.5°C on the relative index would exceed every El Niño since 1950. IRI reports that all 27 models forecast a 'very strong' event (≥ +2.0°C) from OND 2026 through DJF 2026/27, about 10 of them at +3.5°C or more.",
+  "seasons": [
+   {
+    "s": "OND 2026",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "NDJ",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "DJF",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "JFM 2027",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "FMA",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "MAM",
+    "nino": 100,
+    "neutral": 0
+   },
+   {
+    "s": "AMJ",
+    "nino": 92,
+    "neutral": 8
+   },
+   {
+    "s": "MJJ",
+    "nino": 60,
+    "neutral": 40
+   },
+   {
+    "s": "JJA 2027",
+    "nino": 37,
+    "neutral": 51
+   }
+  ],
+  "outlook": [
+   "Peak expected in November–December 2026. The multi-model mean is about +3.5°C (traditional Niño 3.4) for OND and NDJ.",
+   "El Niño stays almost certain through spring 2027: 100% through MAM, 92% in AMJ.",
+   "Decay starts in early summer 2027: 60% in MJJ, and ENSO-neutral becomes most likely (51%) by JJA 2027.",
+   "Coastal El Niño is extreme: Niño 1+2 is +4.6°C (NOAA), above +5°C for three weeks (IRI). Expect heavy rain and flooding risk for coastal Peru and Ecuador in Jan–Apr 2027.",
+   "Positive Indian Ocean Dipole (+0.51°C in September) adds to dryness in Indonesia and Australia."
+  ]
+ },
+ "products": [
+  {
+   "id": "cocoa",
+   "name": "Cocoa powder, chocolate chips and chunks, chocolate-covered items",
+   "category": "Chocolates",
+   "skus": "20087, 20088, 10970, 10971, 10858, 10891",
+   "origins": [
+    "Côte d'Ivoire",
+    "Ghana"
+   ],
+   "window": "Now through Q3 2027 (mid-crop Apr–Sep 2027)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "El Niño brings a harsher Harmattan and below-average rain to West Africa from Dec to Feb, which hurts pod setting for the 2027 mid-crop. Ghana's estimate is 650 kt (−13%) and Côte d'Ivoire's about 1.8 Mt (−18%). StoneX now sees a 64 kt global deficit for 2026/27 instead of a surplus. ICE cocoa is about $5,800/t, a one-month high in mid-October.",
+   "action": "Lock chocolate and cocoa powder pricing with Barry Callebaut and other suppliers through June 2027. Move seasonal (Easter 2027) chocolate orders forward. Expect coating and compound price increases from January.",
+   "crop": 5
+  },
+  {
+   "id": "coconut",
+   "name": "Desiccated coconut, coconut chips, milk, butter, flour and sugar",
+   "category": "Organic",
+   "skus": "36120, 36132, desiccated fine/medium, coconut chips",
+   "origins": [
+    "Philippines",
+    "Indonesia",
+    "Sri Lanka",
+    "Vietnam"
+   ],
+   "window": "Q2 2027–Q1 2028 (6–12 month lag)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "Drought cuts coconut nut set, and output falls 6–12 months later. Prices have been flat for over 27 weeks (EUR 2,500–2,750/t FCA NL). Mundus Agri expects a weather premium in Q1–Q2 2027. PAGASA forecasts below-normal rain in key Philippine coconut areas. Higher palm oil prices also lift coconut oil.",
+   "action": "Buy now while origin prices are still flat. Extend cover to 6 months and ask suppliers for fixed-price contracts through Q2 2027. Get a second origin (Sri Lanka or Vietnam) for organic items.",
+   "crop": 4
+  },
+  {
+   "id": "tropfruit",
+   "name": "Dried mango, pineapple, papaya, lychee, low-sugar mango and strawberries",
+   "category": "Dried Fruits",
+   "skus": "24026, 24027, 24028, 10755, 10756, 10750, 10752, 10753, 24010–24017",
+   "origins": [
+    "Thailand",
+    "Vietnam",
+    "Philippines"
+   ],
+   "window": "Mar–Jul 2027 (mango season)",
+   "cover": "5",
+   "isNew": false,
+   "mechanism": "Krungsri expects Thai rainfall 10–13% below normal, with heavier crop losses in 2027 (THB 110 bn in damage). Dry flowering reduces the 2027 mango and pineapple crop. The new 2026 Thai low-sugar line has no buffer stock yet.",
+   "action": "Contract 2027 mango-season volumes in December–January rather than spring. Hold 5 months of cover on mango and pineapple. Prioritize the new Thai low-sugar SKUs.",
+   "crop": 4
+  },
+  {
+   "id": "brazilnut",
+   "name": "Brazil nuts (conventional and organic, medium, midget, broken)",
+   "category": "Nuts",
+   "skus": "30056, 38002, 30072, 30067, 11390",
+   "origins": [
+    "Bolivia – Amazon",
+    "Peru – Amazon",
+    "Brazil – Amazon"
+   ],
+   "window": "2027/28 crop (harvest Dec 2027–Mar 2028)",
+   "cover": "9–12",
+   "isNew": false,
+   "mechanism": "The current crop has recovered strongly: 105 kt in-shell (+81%). But Brazil nut trees flower in Oct–Dec, and El Niño drought during flowering cut later crops in 2015/16 and 2024. INPE warns that the Amazon drought could match or beat 2015. Low rivers and Bolivia's diesel shortages also delay exports through Arica.",
+   "action": "Buy forward now, while there is a good crop at EUR ~13.50/kg FCA NL. Extend cover to 9–12 months. Brazil nuts keep well frozen or chilled, so confirm cold-storage space.",
+   "crop": 5
+  },
+  {
+   "id": "quinoa",
+   "name": "Quinoa (white, red, black, tri-colour, puffed, crispy, flour)",
+   "category": "Seeds and Grains",
+   "skus": "Organic Peruvian white/black, 3-colour, puffed, crispy quinoa",
+   "origins": [
+    "Peru – Altiplano",
+    "Bolivia – Altiplano"
+   ],
+   "window": "2027 harvest (Apr–Jun 2027)",
+   "cover": "6",
+   "isNew": false,
+   "mechanism": "El Niño dries out the Altiplano during the Oct–Mar growing season. Peru's Senamhi warns of severe drought in Puno through 2027. White quinoa is about EUR 3.22/kg FCA, firm but not yet pricing in crop loss. Coastal flooding can also block Peruvian roads and ports.",
+   "action": "Extend cover to 6 months before Altiplano rainfall data (Dec–Feb) moves prices. Split purchases between Peru and Bolivia.",
+   "crop": 4
+  },
+  {
+   "id": "cashew",
+   "name": "Cashews (raw, roasted, flavoured, pieces, butter)",
+   "category": "Nuts",
+   "skus": "10203, 10212, cashew pieces LP/SP/SSP, 10253, 10255, 11435",
+   "origins": [
+    "Vietnam",
+    "Côte d'Ivoire",
+    "Tanzania",
+    "India",
+    "Cambodia"
+   ],
+   "window": "Feb–Jun 2027 (new raw-nut season)",
+   "cover": "4–5",
+   "isNew": false,
+   "mechanism": "ofi puts the 2026 global crop 10–12% lower, with weaker outturns. El Niño dryness in West Africa can hurt the 2027 flowering, but Tanzania's 2026/27 crop is forecast up about 21%. India's crop depends on the Northeast monsoon.",
+   "action": "Hold 4–5 months of cover. Don't chase prices: watch West African raw-nut opening prices in Feb–Mar 2027 before buying beyond Q2.",
+   "crop": 2
+  },
+  {
+   "id": "sugar",
+   "name": "Candies, gummies, coated items and sugar-infused dried fruit (sugar cost)",
+   "category": "Candies",
+   "skus": "Candy and gummy ranges, crystallized ginger, infused fruit",
+   "origins": [
+    "India",
+    "Thailand",
+    "Brazil – South"
+   ],
+   "window": "Now through Q3 2027",
+   "cover": "3–4",
+   "isNew": false,
+   "mechanism": "After a weak monsoon, India's 2026/27 sugar output forecast (27.9 Mt) is below its consumption, and exports are banned. Thai cane faces drought. Brazil's large crop caps world prices. Candy suppliers will pass on higher sugar costs.",
+   "action": "Ask candy suppliers for price-protection notices. Hold 3–4 months of cover only, since record Brazilian supply limits how far prices can rise.",
+   "crop": 3
+  },
+  {
+   "id": "rice",
+   "name": "Rice (basmati, brown, parboiled, black, puffed), rice crackers and rice flour",
+   "category": "Seeds and Grains",
+   "skus": "Basmati, 31068, organic brown/parboiled basmati, puffed rice, rice crackers",
+   "origins": [
+    "India",
+    "Pakistan",
+    "Thailand",
+    "Vietnam"
+   ],
+   "window": "Now–Q2 2027",
+   "cover": "4",
+   "isNew": false,
+   "mechanism": "Thailand's dry-season rice is at risk. India restricted rice exports in the 2023 El Niño and could do so again. Indian golden sella rose from €0.81 to €0.85/kg FOB in a week (Oct 17–24). Vietnam is steady.",
+   "action": "Hold 4 months of cover on basmati and parboiled rice. Watch Indian export-policy news weekly.",
+   "crop": 3
+  },
+  {
+   "id": "palm",
+   "name": "Palm-oil inputs: compound coatings, coated snacks, crackers, toppings",
+   "category": "Snacks",
+   "skus": "Compound coatings, coated snacks, crackers, toppings",
+   "origins": [
+    "Indonesia",
+    "Malaysia"
+   ],
+   "window": "Q2–Q3 2027 (6–12 month lag)",
+   "cover": "3",
+   "isNew": false,
+   "mechanism": "Drought hurts palm yields 6–12 months later. Indonesia's output is forecast to fall from 53.7 to 51.7 Mt in 2027, and Malaysia's to 19.8–20 Mt. The impact peaks around Mar–May 2027. High Malaysian stocks are capping prices for now.",
+   "action": "No early buying. Ask suppliers of coated products about expected 2027 surcharges.",
+   "crop": 3
+  },
+  {
+   "id": "plantain",
+   "name": "Plantain and banana chips, plantain croutons",
+   "category": "Snacks",
+   "skus": "12072, plantain chips, banana chips",
+   "origins": [
+    "Ecuador",
+    "Peru – coast",
+    "Colombia",
+    "Philippines"
+   ],
+   "window": "Jan–May 2027",
+   "cover": "4",
+   "isNew": true,
+   "mechanism": "Niño 1+2 is above +4.6°C, an extreme coastal El Niño. This brings heavy rain, floods and road and port disruption to coastal Ecuador and Peru (Guayaquil, Paita), as in 1998 and 2017. The Philippines faces drought instead.",
+   "action": "Build 4 months of cover before January. Have a backup supplier outside the Peru/Ecuador coast (Colombia or Central America).",
+   "crop": 4
+  },
+  {
+   "id": "maple",
+   "name": "Maple products (maple pecans, butter, flakes, sugar, candies)",
+   "category": "Miscellaneous",
+   "skus": "Maple syrup pecans, maple butter, maple flakes, maple sugar, 80171",
+   "origins": [
+    "Canada – Québec"
+   ],
+   "window": "Sugaring season Mar–Apr 2027",
+   "cover": "Through May 2027",
+   "isNew": false,
+   "mechanism": "Strong El Niño winters are usually milder in eastern Canada. That can shorten or disrupt the freeze–thaw cycle sap flow needs, so a poor season is more likely, though not certain. The current status of the Québec strategic reserve was not verified.",
+   "action": "Confirm 2027 allocation and pricing with maple suppliers in Q1. Order Easter and spring needs before the season starts.",
+   "crop": 3
+  },
+  {
+   "id": "spices",
+   "name": "Ginger (dried, crystallized), cinnamon, turmeric, black pepper",
+   "category": "Dried Fruits",
+   "skus": "10759, 10760, 10761, 10762, 30023",
+   "origins": [
+    "China",
+    "Thailand",
+    "Indonesia",
+    "Vietnam",
+    "India"
+   ],
+   "window": "2027 harvests",
+   "cover": "4",
+   "isNew": false,
+   "mechanism": "Drier conditions in Indonesia and Vietnam (cinnamon, pepper) and weaker Indian yields add to already tight pepper supply. Ginger from Thailand and China is less exposed.",
+   "action": "Hold 4 months on cinnamon and pepper items. Keep normal cover on ginger.",
+   "crop": 3
+  },
+  {
+   "id": "sesame",
+   "name": "Sesame seeds (natural, hulled, black, toasted)",
+   "category": "Seeds and Grains",
+   "skus": "20059, 20060, 20061, 20062",
+   "origins": [
+    "India",
+    "Ethiopia",
+    "Sudan",
+    "Nigeria",
+    "Mexico"
+   ],
+   "window": "Now–Q2 2027",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "India's kharif sesame was planted during a weak monsoon, so yields are lower. African origins are less affected by El Niño.",
+   "action": "Shift some volume toward African or Mexican origins. Normal cover.",
+   "crop": 2
+  },
+  {
+   "id": "chia",
+   "name": "Chia seeds and chia products",
+   "category": "Superfoods",
+   "skus": "Black chia, organic chia, chia powder",
+   "origins": [
+    "Paraguay",
+    "Argentina",
+    "Mexico"
+   ],
+   "window": "2027 harvest (Apr–Jun)",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "El Niño usually brings above-normal rain to Paraguay and northern Argentina. That helps yields but risks harvest delays and flooding. Bolivian lowlands can be dry.",
+   "action": "Keep normal cover. Recheck in March.",
+   "crop": 2
+  },
+  {
+   "id": "macadamia",
+   "name": "Macadamia nuts",
+   "category": "Nuts",
+   "skus": "30065, macadamia",
+   "origins": [
+    "South Africa",
+    "Kenya",
+    "Malawi",
+    "Australia"
+   ],
+   "window": "2027 crop",
+   "cover": "3",
+   "isNew": true,
+   "mechanism": "El Niño dries southern Africa (Malawi, South Africa) and eastern Australia during flowering. It's too early to size the impact, and China's crop is up.",
+   "action": "Keep normal cover. Watch southern African rainfall in Dec–Feb.",
+   "crop": 2
+  },
+  {
+   "id": "peanuts",
+   "name": "Peanuts and peanut products",
+   "category": "Peanuts",
+   "skus": "10111, 10112, 10118, 10124, peanut butter, 31601",
+   "origins": [
+    "Argentina",
+    "USA – Southeast",
+    "China"
+   ],
+   "window": "2027 crop",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "El Niño usually brings good rain to Argentina and the US Southeast, which is often positive for peanuts.",
+   "action": "Keep normal cover. This is a line to avoid over-buying.",
+   "crop": 1
+  },
+  {
+   "id": "treenuts",
+   "name": "Almonds, walnuts, pecans, pistachios (California)",
+   "category": "Nuts",
+   "skus": "10601–10685, 30049–30103, 10503",
+   "origins": [
+    "USA – California",
+    "Spain",
+    "Türkiye"
+   ],
+   "window": "2027 crop",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "Strong El Niño winters are often wetter in California, which is neutral to positive. Tight pistachio supply comes from an off-year (about half of 2025), not El Niño. Türkiye's hazelnut crop is comfortable.",
+   "action": "Keep normal cover. Don't treat El Niño as a reason to buy these early.",
+   "crop": 1
+  },
+  {
+   "id": "dates",
+   "name": "Dates (Medjool, Deglet Nour, pitted)",
+   "category": "Dried Fruits",
+   "skus": "10730, 10727, 30038",
+   "origins": [
+    "Tunisia",
+    "USA – California",
+    "Middle East"
+   ],
+   "window": "—",
+   "cover": "Normal",
+   "isNew": false,
+   "mechanism": "Little direct link to El Niño.",
+   "action": "Keep normal cover.",
+   "crop": 1
+  },
+  {
+   "id": "tropexotic",
+   "name": "Dried dragon fruit, sweet potato cubes, jackfruit",
+   "category": "Dried Fruits",
+   "skus": "10717, 14102",
+   "origins": [
+    "Vietnam",
+    "Thailand"
+   ],
+   "window": "Q1–Q3 2027",
+   "cover": "4",
+   "isNew": true,
+   "mechanism": "The Mekong Delta faces drought and saltwater intrusion in the El Niño dry season (Feb–Apr), as in 2016 and 2024.",
+   "action": "Hold 4 months of cover on these 2026 new lines. Ask suppliers about stock levels.",
+   "crop": 3
+  }
+ ],
+ "decisions": [
+  {
+   "line": "Cocoa and chocolate",
+   "cover": "6 months",
+   "decision": "Fix prices through June 2027 now and move Easter orders forward."
+  },
+  {
+   "line": "Brazil nuts",
+   "cover": "9–12 months",
+   "decision": "Buy forward on the good current crop. The 2027/28 crop is at risk from drought during flowering."
+  },
+  {
+   "line": "Coconut (all forms)",
+   "cover": "6 months",
+   "decision": "Buy while origin prices are still flat and ask for fixed-price contracts."
+  },
+  {
+   "line": "Quinoa",
+   "cover": "6 months",
+   "decision": "Buy before Dec–Feb Altiplano rain data and split between Peru and Bolivia."
+  },
+  {
+   "line": "Dried mango, pineapple, papaya",
+   "cover": "5 months",
+   "decision": "Contract 2027 season volumes by January."
+  },
+  {
+   "line": "Cashews",
+   "cover": "4–5 months",
+   "decision": "Hold. Decide on cover past Q2 after the Feb–Mar raw-nut prices."
+  },
+  {
+   "line": "Plantain and banana chips",
+   "cover": "4 months",
+   "decision": "Build stock before January floods on the Peru and Ecuador coast."
+  },
+  {
+   "line": "Rice, sugar items, palm-based items",
+   "cover": "3–4 months",
+   "decision": "Moderate cover only, since supply elsewhere limits price rises."
+  },
+  {
+   "line": "Maple products",
+   "cover": "Through May 2027",
+   "decision": "Confirm 2027 allocations in Q1."
+  },
+  {
+   "line": "Ocean freight (Asia to Montréal)",
+   "cover": "+2 weeks lead time",
+   "decision": "Book Q1 2027 sailings early. Get quotes for both Panama and West Coast-rail routings, and check the Panama surcharges ($130–500/TEU) in each quote."
+  }
+ ],
+ "signals": [
+  {
+   "date": "Mondays",
+   "what": "NOAA CPC weekly ENSO update: Niño 3.4 and 1+2 values. A drop below +2.0°C (relative) before February would mean an early decline."
+  },
+  {
+   "date": "2026-11-12",
+   "what": "NOAA ENSO Diagnostic Discussion, with new strength and peak probabilities. Next one is on 10 December."
+  },
+  {
+   "date": "Thursdays",
+   "what": "Drewry World Container Index: Shanghai → New York and Los Angeles spot rates, and blank sailings."
+  },
+  {
+   "date": "Ongoing",
+   "what": "Carrier surcharge notices (Panama, emergency, bunker) and Suez/Hormuz routing updates from CMA CGM, MSC, Maersk, Hapag-Lloyd and ONE."
+  },
+  {
+   "date": "End of month",
+   "what": "Sea-Intelligence schedule reliability: the October figure comes out in late November."
+  },
+  {
+   "date": "Mid-Nov / mid-Dec",
+   "what": "IRI ENSO plume update: the model-mean peak and the decay timing for MJJ 2027."
+  },
+  {
+   "date": "Weekly",
+   "what": "Côte d'Ivoire port cocoa arrivals compared with last year, and ICE cocoa prices."
+  },
+  {
+   "date": "Dec–Feb",
+   "what": "Harmattan strength in West Africa, the main risk for the 2027 cocoa mid-crop."
+  },
+  {
+   "date": "Dec–Feb",
+   "what": "Rain on the Peru and Bolivia Altiplano (Senamhi), which drives the quinoa crop."
+  },
+  {
+   "date": "~10th monthly",
+   "what": "MPOB Malaysian palm oil stocks and output, plus GAPKI data for Indonesia."
+  },
+  {
+   "date": "Jan 2027",
+   "what": "Panama Canal Authority (ACP) advisories and Gatun Lake level as the dry season starts. Watch for transit-slot cuts."
+  },
+  {
+   "date": "Jan–Mar",
+   "what": "Rain and flood alerts for coastal Peru and Ecuador (plantain, quinoa logistics)."
+  },
+  {
+   "date": "Ongoing",
+   "what": "Indian sugar and rice export-policy announcements, and ISMA production estimates."
+  },
+  {
+   "date": "Feb–Mar",
+   "what": "Québec winter temperatures and the start of the maple sugaring season."
+  }
+ ],
+ "overbuy": "<p><b>Overall risk: moderate.<\/b> The models agree strongly that El Niño lasts through spring 2027 (100% through MAM). A collapse before the main crop impacts is unlikely. But IRI shows decay starting in MJJ 2027 (60%), and strong El Niños are often followed by La Niña, as in 2016 and 2024. Prices can then fall quickly.<\/p><ul class='clean'><li><b>Highest over-buying risk:<\/b> sugar-based items, palm-based items, rice, peanuts and California tree nuts. Other supply (Brazil sugar, Malaysian palm stocks, good US crops) already caps prices on these lines.<\/li><li><b>Lower risk:<\/b> cocoa, coconut and Brazil nuts. The crop damage is largely locked in through flowering and the lag, even if El Niño fades early.<\/li><li><b>Costs of over-cover:<\/b> shelf life (nuts lose quality after 9–12 months unless chilled), warehouse space, working capital, and paying today's premium if prices ease in H2 2027.<\/li><li><b>Guardrails:<\/b> buy in 2–3 tranches rather than all at once. Review cover monthly after each NOAA release. Ask suppliers for price-reopener clauses. Cut targets back to normal if Niño 3.4 (relative) falls below +1.5°C before April 2027.<\/li><\/ul>",
+ "routes": [
+  {
+   "name": "Panama Canal (Asia ↔ US/Canada East Coast)",
+   "status": "warn",
+   "label": "Eased, still limited",
+   "text": "The Canal Authority (ACP) raised the Neopanamax draft back to 49 ft on 28 Sept and restored 10 Neopanamax slots on 15 Oct. That's 33 transits a day, against 36 normally. Gatun Lake was 84.7 ft in October, just under the 85 ft comfort level; May–Aug rain was 34% below average. The main risk is the Jan–Apr 2027 dry season: in 2023–24, transits fell from 36 to 18 a day.",
+   "impact": "Carriers charge Panama surcharges of $130–500/TEU on Asia → US East Coast (see table). Allow 1–2 extra weeks on Q1–Q2 2027 bookings and compare with Suez and West Coast-rail options.",
+   "id": "panama"
+  },
+  {
+   "name": "Asia ↔ Canada West Coast + rail (Vancouver, Prince Rupert)",
+   "status": "ok",
+   "label": "Normal",
+   "text": "There's no direct El Niño effect. This is the main backup if Panama tightens, so expect it to fill and get more expensive if Panama capacity falls.",
+   "impact": "Get rail-routing quotes now as a fallback for SE Asia coconut, mango and cashew shipments.",
+   "id": "westcoast"
+  },
+  {
+   "id": "suez",
+   "name": "Suez Canal and Red Sea (Asia, India, Africa ↔ Montréal)",
+   "status": "warn",
+   "label": "Partial return",
+   "text": "Carriers are returning gradually: Gemini moved several Asia–Europe services back through Suez in late September. Suez had 62 transits last week, its highest of 2026, against about 80 a week before the crisis. War-risk insurance is still high, and the Cape of Good Hope route adds 7–14 days.",
+   "impact": "India, Middle East and East Africa cargo may come via Suez or the Cape. Check each booking's routing and allow up to 2 extra weeks."
+  },
+  {
+   "id": "hormuz",
+   "name": "Strait of Hormuz (Persian Gulf)",
+   "status": "bad",
+   "label": "Effectively closed",
+   "text": "Traffic has been largely blocked since 28 Feb 2026, with only 2 vessels transiting in late October. The major container lines suspended Hormuz calls, and war-risk premiums are several times normal. This isn't El Niño related, but it is the biggest shipping disruption this year.",
+   "impact": "Gulf-origin products (UAE dates, Iranian pistachios and saffron) need other routes and supplier checks. Higher fuel costs are passed on as bunker surcharges on every lane."
+  },
+  {
+   "name": "Indonesia, Malaysia, Thailand, Vietnam origin ports",
+   "status": "warn",
+   "label": "Watch",
+   "text": "Drought brings low river levels, smoke from fires and saltwater intrusion in the Mekong. These slow inland barge and truck movement, and smoke can disrupt ports briefly.",
+   "impact": "Expect slower origin handling, especially Feb–Apr 2027.",
+   "id": "seasia"
+  },
+  {
+   "name": "West Africa (Abidjan, San Pedro, Tema)",
+   "status": "ok",
+   "label": "Normal",
+   "text": "Ports are working normally. The risk is the crop, not logistics.",
+   "impact": "No change to lead time.",
+   "id": "westafrica"
+  },
+  {
+   "name": "Peru and Ecuador Pacific coast (Callao, Paita, Guayaquil)",
+   "status": "bad",
+   "label": "High risk Q1 2027",
+   "text": "The extreme coastal El Niño (Niño 1+2 above +4.6°C) points to heavy rain, landslides and road cuts in Jan–Apr 2027, as in 1998 and 2017.",
+   "impact": "Quinoa, plantain and banana-chip shipments could slip 2–4 weeks. Ship before January where you can.",
+   "id": "pacificsa"
+  },
+  {
+   "name": "Bolivia ↔ Arica (Chile) and Amazon rivers",
+   "status": "warn",
+   "label": "Disrupted",
+   "text": "Bolivia has diesel shortages and has had blockades, and Arica is congested. Low Amazon rivers in the dry season slow barge transport.",
+   "impact": "Brazil-nut and Bolivian quinoa lead times are less reliable. Order early.",
+   "id": "bolivia"
+  },
+  {
+   "name": "Southern Brazil and Argentina",
+   "status": "warn",
+   "label": "Flood risk",
+   "text": "El Niño brings heavy rain and flooding to Rio Grande do Sul and northeast Argentina. That's good for crops but can disrupt ports and roads.",
+   "impact": "Minor exposure for Tootsi (peanuts, chia).",
+   "id": "southbrazil"
+  },
+  {
+   "name": "Atlantic and St. Lawrence (Montréal)",
+   "status": "ok",
+   "label": "Favourable",
+   "text": "El Niño usually suppresses Atlantic hurricanes and brings a milder Québec winter, so less St. Lawrence ice is likely.",
+   "impact": "Winter port operations in Montréal should go more smoothly.",
+   "id": "atlantic"
+  },
+  {
+   "name": "Australia and Indian Ocean",
+   "status": "ok",
+   "label": "Calmer seas",
+   "text": "Seas are calmer, but crops are poorer (wheat, macadamia). The positive IOD adds to dryness.",
+   "impact": "Little shipping impact. There's a crop impact on macadamia.",
+   "id": "australia"
+  }
+ ],
+ "sources": [
+  {
+   "t": "NOAA CPC – ENSO Diagnostic Discussion (8 Oct 2026)",
+   "u": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+  },
+  {
+   "t": "NOAA CPC – ENSO weekly update (2 Nov 2026)",
+   "u": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/lanina/enso_evolution-status-fcsts-web.pdf"
+  },
+  {
+   "t": "IRI ENSO Forecast QuickLook (19 Oct 2026)",
+   "u": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/"
+  },
+  {
+   "t": "Trading Economics – Cocoa (Oct 2026)",
+   "u": "https://tradingeconomics.com/commodity/cocoa/news/591579"
+  },
+  {
+   "t": "AllAfrica – El Niño and disease threaten West Africa's cocoa (Sep 2026)",
+   "u": "https://allafrica.com/stories/202609020013.html"
+  },
+  {
+   "t": "Mundus Agri – Desiccated coconuts (Aug 2026)",
+   "u": "https://www.mundus-agri.eu/news/desiccated-coconuts-stable-prices-subdued-trading.n37872.html"
+  },
+  {
+   "t": "Mundus Agri – Brazil nuts crop improves (Aug 2026)",
+   "u": "https://www.mundus-agri.eu/news/brazil-nuts-crop-improves-significantly.n37820.html"
+  },
+  {
+   "t": "Vesper – Bolivia blockades and Brazil nut shipments (Jul 2026)",
+   "u": "https://vespertool.com/news/bolivias-blockades-lift-but-diesel-shortages-keep-brazil-nut-shipments-stuck/"
+  },
+  {
+   "t": "Agência Cenarium – El Niño 2026 Amazon drought (May 2026)",
+   "u": "https://agenciacenarium.com.br/el-nino-2026-may-trigger-a-drought-worse-than-the-2015-drought-in-the-amazon/?lang=en"
+  },
+  {
+   "t": "CMB – Bolivian quinoa and Super Niño risk (Jul 2026)",
+   "u": "https://commodity-board.com/bolivian-quinoa-holds-firm-in-europe-as-super-nino-risk-looms"
+  },
+  {
+   "t": "Vesper – Cashew and pistachio crops (Aug 2026)",
+   "u": "https://vespertool.com/news/smaller-cashew-and-pistachio-crops-meet-a-macadamia-rebound/"
+  },
+  {
+   "t": "Dawn/Reuters – India unlikely to export sugar (Jun 2026)",
+   "u": "https://www.dawn.com/news/2010053"
+  },
+  {
+   "t": "The Star/Reuters – Malaysian palm oil output (30 Oct 2026)",
+   "u": "https://www.thestar.com.my/business/business-news/2026/10/30/timely-rains-cushion-el-nio-blow-to-malaysian-palm-oil-output"
+  },
+  {
+   "t": "CMB – Rice FOB prices (29 Oct 2026)",
+   "u": "https://commodity-board.com/el-nino-keeps-global-rice-on-edge-as-asian-fob-prices-firm"
+  },
+  {
+   "t": "Krungsri Research – Super El Niño drought risk, Thailand (Sep 2026)",
+   "u": "https://www.krungsri.com/en/research/research-intelligence/drought-flood-2026"
+  },
+  {
+   "t": "IAM – Panama Canal tightens draft limits (Aug 2026)",
+   "u": "https://iamovers.org/news/panama-canal-tightens-draft-limits-again-as-el-nino-intensifies"
+  },
+  {
+   "t": "Riviera – Panama Canal draft restrictions (Jul 2026)",
+   "u": "https://www.rivieramm.com/news-content-hub/panama-canal-authority-adds-to-draft-restrictions-in-waterway-in-coming-weeks-89293"
+  },
+  {
+   "t": "Hellenic Shipping News – How El Niño 2026 could reshape shipping (Jul 2026)",
+   "u": "https://www.hellenicshippingnews.com/four-routes-and-a-reprieve-how-el-nino-2026-could-reshape-global-shipping-operations/"
+  },
+  {
+   "t": "Maritime Executive – Panama Canal eases restrictions (28 Sep 2026)",
+   "u": "https://maritime-executive.com/article/panama-canal-eases-restrictions-adding-transit-slot-and-maximum-draft"
+  },
+  {
+   "t": "SLST – Panama Canal draft and transits 2026 (updated 2 Nov 2026)",
+   "u": "https://slstist.com/en/panama-canal-draft-transits-2026/"
+  },
+  {
+   "t": "Supply Chain Dive – Carriers raise Panama fees (Aug 2026)",
+   "u": "https://supplychaindive.com/news/panama-canal-continues-draft-restrictions-ocean-carriers-up-fees/828039"
+  },
+  {
+   "t": "DCN – Drewry World Container Index (29 Oct 2026)",
+   "u": "https://www.thedcn.com.au/news/world-container-index-29-october-2026"
+  },
+  {
+   "t": "Carra Globe – Red Sea carriers return (Sep 2026)",
+   "u": "https://carraglobe.com/red-sea-carrier-return-2026/"
+  },
+  {
+   "t": "Wikipedia – 2026 Strait of Hormuz crisis",
+   "u": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+  },
+  {
+   "t": "Sea-Intelligence – Schedule reliability, September 2026 (28 Oct 2026)",
+   "u": "https://www.sea-intelligence.com/press-room/415-global-schedule-reliability-records-a-marginal-gain-in-september"
+  },
+  {
+   "t": "Kuehne+Nagel – Port operational updates, 21–27 Oct 2026",
+   "u": "https://mykn.kuehne-nagel.com/news/article/port-operational-updates-from-27-10-2026"
+  },
+  {
+   "t": "C.H. Robinson – Ocean freight market update (Oct 2026)",
+   "u": "https://www.chrobinson.com/en-sg/resources/insights-and-advisories/north-america-freight-insights/oct-2026-freight-market-update/ocean/"
+  }
+ ],
+ "originLib": {
+  "Côte d'Ivoire": {
+   "region": "West Africa",
+   "risk": 5,
+   "window": "Dec 2026–Sep 2027",
+   "effect": "Harsher Harmattan and below-average rain hurt cocoa pod setting (mid-crop) and cashew flowering.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Ghana": {
+   "region": "West Africa",
+   "risk": 5,
+   "window": "Dec 2026–Sep 2027",
+   "effect": "Below-average rain and a strong Harmattan; Ghana's cocoa estimate is already down 13%.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Nigeria": {
+   "region": "West Africa",
+   "risk": 4,
+   "window": "Dec 2026–Jun 2027",
+   "effect": "Drier dry season; cocoa, cashew and sesame yields at risk.",
+   "routes": [
+    "westafrica",
+    "atlantic"
+   ]
+  },
+  "Tanzania": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "Oct 2026–Jan 2027",
+   "effect": "El Niño usually brings above-normal short rains: good for crops, but harvest and road delays.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Kenya": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "Oct 2026–Jan 2027",
+   "effect": "Wetter short-rains season; flooding risk rather than drought.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Ethiopia": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "2027 season",
+   "effect": "Mixed: wetter in the south, possible drought in the north next summer.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Sudan": {
+   "region": "East Africa",
+   "risk": 2,
+   "window": "2027 season",
+   "effect": "Weak link; rainy-season risk in summer 2027.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Malawi": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "El Niño dries southern Africa during the rainy season; flowering stress.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Mozambique": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "Drier rainy season in the south.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "South Africa": {
+   "region": "Southern Africa",
+   "risk": 3,
+   "window": "Dec 2026–Mar 2027",
+   "effect": "Summer drought and heat are typical in strong El Niño years.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "India": {
+   "region": "South Asia",
+   "risk": 4,
+   "window": "Now–Q3 2027",
+   "effect": "The 2026 monsoon was weak; export bans (sugar, possibly rice) are a policy risk.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Pakistan": {
+   "region": "South Asia",
+   "risk": 3,
+   "window": "Now–Q2 2027",
+   "effect": "Water stress for rice; follows Indian export policy.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Sri Lanka": {
+   "region": "South Asia",
+   "risk": 3,
+   "window": "Q1–Q3 2027",
+   "effect": "Drier conditions hurt coconut yields with a lag.",
+   "routes": [
+    "suez"
+   ]
+  },
+  "Thailand": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q1–Q3 2027",
+   "effect": "Krungsri expects rainfall 10–13% below normal; fruit, rice, cane and palm are at risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Vietnam": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Feb–Jun 2027",
+   "effect": "Mekong Delta drought and saltwater intrusion in the dry season (as in 2016 and 2024).",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Philippines": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q2 2027–Q1 2028",
+   "effect": "Below-normal rain in coconut areas (PAGASA); coconut yields fall 6–12 months later.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Indonesia": {
+   "region": "SE Asia",
+   "risk": 4,
+   "window": "Q2 2027–Q1 2028",
+   "effect": "Drought plus a positive Indian Ocean Dipole; palm, coconut and spice yields fall with a lag; fire and smoke risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Malaysia": {
+   "region": "SE Asia",
+   "risk": 3,
+   "window": "Mar–May 2027",
+   "effect": "Timely rains cushion the impact so far; peak impact expected in Mar–May 2027.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Cambodia": {
+   "region": "SE Asia",
+   "risk": 3,
+   "window": "Q1–Q2 2027",
+   "effect": "Mekong drought risk.",
+   "routes": [
+    "seasia",
+    "panama",
+    "westcoast"
+   ]
+  },
+  "China": {
+   "region": "East Asia",
+   "risk": 2,
+   "window": "2027",
+   "effect": "Mixed regional effects; a weak overall link.",
+   "routes": [
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Japan": {
+   "region": "East Asia",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "panama",
+    "westcoast"
+   ]
+  },
+  "Australia": {
+   "region": "Oceania",
+   "risk": 3,
+   "window": "Spring 2026–2027",
+   "effect": "Drier east and south with a positive IOD; calmer seas.",
+   "routes": [
+    "australia",
+    "panama"
+   ]
+  },
+  "Peru – coast": {
+   "region": "South America Pacific",
+   "risk": 5,
+   "window": "Jan–Apr 2027",
+   "effect": "Extreme coastal El Niño (Niño 1+2 above +4.6°C): heavy rain, floods, road and port disruption.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Peru – Altiplano": {
+   "region": "Andes",
+   "risk": 4,
+   "window": "Oct 2026–Jun 2027",
+   "effect": "Altiplano drought in the growing season; Senamhi warns of severe drought in Puno through 2027.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Peru – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "Amazon drought during Brazil-nut flowering; low rivers.",
+   "routes": [
+    "bolivia",
+    "pacificsa"
+   ]
+  },
+  "Bolivia – Altiplano": {
+   "region": "Andes",
+   "risk": 4,
+   "window": "Oct 2026–Jun 2027",
+   "effect": "Reduced rainfall and drought risk for quinoa; blockades and diesel shortages.",
+   "routes": [
+    "bolivia",
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Bolivia – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "Drought during flowering cuts the next Brazil-nut crop; fires and low rivers.",
+   "routes": [
+    "bolivia",
+    "atlantic"
+   ]
+  },
+  "Brazil – Amazon": {
+   "region": "Amazon",
+   "risk": 5,
+   "window": "Oct 2026–2028",
+   "effect": "INPE warns the Amazon drought could match or beat 2015.",
+   "routes": [
+    "bolivia",
+    "atlantic"
+   ]
+  },
+  "Brazil – South": {
+   "region": "South America Atlantic",
+   "risk": 2,
+   "window": "Oct 2026–Mar 2027",
+   "effect": "Heavy rain and floods in Rio Grande do Sul; good for crops but bad for logistics.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Ecuador": {
+   "region": "South America Pacific",
+   "risk": 5,
+   "window": "Jan–Apr 2027",
+   "effect": "Coastal floods and landslides around Guayaquil (as in 1998 and 2017).",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Colombia": {
+   "region": "South America Pacific",
+   "risk": 3,
+   "window": "Dec 2026–Apr 2027",
+   "effect": "El Niño usually dries the Andes and Caribbean regions.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Paraguay": {
+   "region": "South America Atlantic",
+   "risk": 2,
+   "window": "Oct 2026–Apr 2027",
+   "effect": "Above-normal rain: helps yields but risks floods and harvest delays.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Argentina": {
+   "region": "South America Atlantic",
+   "risk": 1,
+   "window": "Oct 2026–Apr 2027",
+   "effect": "El Niño usually brings beneficial rain to the Pampas.",
+   "routes": [
+    "southbrazil",
+    "atlantic"
+   ]
+  },
+  "Chile": {
+   "region": "South America Pacific",
+   "risk": 1,
+   "window": "Winter 2027",
+   "effect": "Wetter central Chile; low risk.",
+   "routes": [
+    "pacificsa",
+    "panama"
+   ]
+  },
+  "Mexico": {
+   "region": "North America",
+   "risk": 2,
+   "window": "2027",
+   "effect": "Drier south in summer; a weak overall link.",
+   "routes": []
+  },
+  "USA – California": {
+   "region": "North America",
+   "risk": 1,
+   "window": "Winter 2026/27",
+   "effect": "Often a wetter winter; neutral to positive.",
+   "routes": []
+  },
+  "USA – Southeast": {
+   "region": "North America",
+   "risk": 1,
+   "window": "Winter 2026/27",
+   "effect": "Wetter winter; positive for peanuts.",
+   "routes": []
+  },
+  "Canada – Québec": {
+   "region": "North America",
+   "risk": 3,
+   "window": "Mar–Apr 2027",
+   "effect": "Milder winter can shorten or disrupt the maple freeze–thaw season.",
+   "routes": []
+  },
+  "Canada – Prairies": {
+   "region": "North America",
+   "risk": 2,
+   "window": "Winter 2026/27",
+   "effect": "Warmer, drier winter; low soil moisture risk for spring.",
+   "routes": []
+  },
+  "Spain": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Türkiye": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Bulgaria": {
+   "region": "Europe",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Tunisia": {
+   "region": "North Africa",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "atlantic"
+   ]
+  },
+  "Middle East": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak link.",
+   "routes": [
+    "hormuz",
+    "suez"
+   ]
+  },
+  "Iran": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak El Niño link; shipping is blocked by the Hormuz crisis.",
+   "routes": [
+    "hormuz"
+   ]
+  },
+  "UAE": {
+   "region": "Middle East",
+   "risk": 1,
+   "window": "—",
+   "effect": "Weak El Niño link; Gulf ports are affected by the Hormuz crisis.",
+   "routes": [
+    "hormuz"
+   ]
+  }
+ },
+ "live": {
+  "url": "tootsi-enso-data.json",
+  "refreshMinutes": 30
+ },
+ "freight": {
+  "asOf": "2026-10-29",
+  "source": "Drewry World Container Index",
+  "next": "Every Thursday",
+  "items": [
+   {
+    "k": "WCI composite",
+    "v": 4429,
+    "chg": -3
+   },
+   {
+    "k": "Shanghai → New York",
+    "v": 9631,
+    "chg": -5
+   },
+   {
+    "k": "Shanghai → Los Angeles",
+    "v": 7514,
+    "chg": -6
+   },
+   {
+    "k": "Shanghai → Rotterdam",
+    "v": 3686,
+    "chg": 1
+   }
+  ],
+  "note": "US$ per 40 ft container, spot. Transpacific rates are falling: Drewry expects another drop next week, with 6 blank (cancelled) sailings announced. Rates are still more than double their late-2025 level of about $1,850, mainly because of the Hormuz crisis and Panama limits."
+ },
+ "carriers": [
+  {
+   "carrier": "CMA CGM",
+   "type": "Surcharge",
+   "detail": "Panama Canal Adjustment Factor: $500/TEU",
+   "lanes": "Far East → US East and Gulf Coast",
+   "effective": "2026-09-10",
+   "status": "bad"
+  },
+  {
+   "carrier": "MSC",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $149/TEU, $297/40 ft, $376/45 ft",
+   "lanes": "SE Asia, China, Korea, Japan → US East and Gulf Coast",
+   "effective": "2026-09-12",
+   "status": "warn"
+  },
+  {
+   "carrier": "ONE",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $150/TEU",
+   "lanes": "Transpacific eastbound",
+   "effective": "2026-08-10",
+   "status": "warn"
+  },
+  {
+   "carrier": "Hapag-Lloyd",
+   "type": "Surcharge",
+   "detail": "Panama Canal surcharge: $130/TEU",
+   "lanes": "Far East → North America",
+   "effective": "2026-08-15",
+   "status": "warn"
+  },
+  {
+   "carrier": "Maersk",
+   "type": "Surcharge",
+   "detail": "No Panama surcharge published as of late August. Check before booking.",
+   "lanes": "Asia → North America",
+   "effective": "—",
+   "status": "ok"
+  },
+  {
+   "carrier": "Gemini (Maersk + Hapag-Lloyd)",
+   "type": "Routing",
+   "detail": "AE11, AE5 and ME2 back through Suez from 19–24 Sept, and the ME1 India–Europe service too. AE12 is not dated yet.",
+   "lanes": "Asia, India → Europe and Mediterranean",
+   "effective": "2026-09-19",
+   "status": "ok"
+  },
+  {
+   "carrier": "Maersk, CMA CGM, Hapag-Lloyd",
+   "type": "Suspension",
+   "detail": "Strait of Hormuz transits suspended since late Feb 2026. Gulf cargo moves via other ports and feeders.",
+   "lanes": "Persian Gulf (UAE, Iran, Qatar, Kuwait)",
+   "effective": "2026-02-28",
+   "status": "bad"
+  },
+  {
+   "carrier": "Transpacific carriers",
+   "type": "Blank sailings",
+   "detail": "6 sailings cancelled next week (up from 5) as US imports drop about 11% in November.",
+   "lanes": "Asia → North America",
+   "effective": "2026-11-02",
+   "status": "warn"
+  }
+ ],
+ "reliability": {
+  "asOf": "2026-09",
+  "source": "Sea-Intelligence GLP (28 Oct 2026)",
+  "global": 50.6,
+  "globalChg": 0.9,
+  "avgDelay": 6.65,
+  "note": "Only half of vessels arrive on time. Late ships average 6.65 days behind schedule. Reliability fell from 64.5% in May, and none of the top-13 carriers improved on last year. Port congestion ties up about 12% of global ship capacity, a four-year high.",
+  "carriers": [
+   {
+    "c": "Maersk",
+    "p": 64.8
+   },
+   {
+    "c": "Hapag-Lloyd",
+    "p": 60.4
+   },
+   {
+    "c": "MSC",
+    "p": 57.7
+   },
+   {
+    "c": "CMA CGM",
+    "p": 51.8
+   },
+   {
+    "c": "Wan Hai",
+    "p": 26.7
+   }
+  ],
+  "alliances": [
+   {
+    "c": "MSC (stand-alone)",
+    "p": 68.9
+   },
+   {
+    "c": "Gemini (Maersk + Hapag)",
+    "p": 68.4
+   },
+   {
+    "c": "Ocean Alliance (CMA CGM, COSCO, Evergreen, OOCL)",
+    "p": 44.8
+   },
+   {
+    "c": "Premier Alliance (ONE, HMM, Yang Ming)",
+    "p": 41.5
+   }
+  ]
+ },
+ "rollovers": [
+  {
+   "lane": "India → North America",
+   "level": "bad",
+   "text": "High rollover risk and longer booking lead times. Transhipment problems at Colombo, with congestion at Nhava Sheva and Mundra.",
+   "action": "Book 3–4 weeks ahead and ask for direct services or confirmed connections."
+  },
+  {
+   "lane": "Asia → North America (Transpacific)",
+   "level": "warn",
+   "text": "Blank sailings (6 next week) take capacity out, and cargo from cancelled sailings rolls to the next vessel. The first sailings after holidays are most exposed.",
+   "action": "Confirm the vessel 7 days before cut-off. Avoid the first sailing after Chinese New Year (Feb 2027)."
+  },
+  {
+   "lane": "Vietnam (Cai Mep / Vung Tau)",
+   "level": "warn",
+   "text": "Berth congestion is up to 4 days for off-window vessels, and yards are above 90% full. Missed connections lead to rolls.",
+   "action": "Allow 1 extra week for Vietnamese cashews, dried fruit and pepper."
+  },
+  {
+   "lane": "Africa (Tema, Abidjan, Durban)",
+   "level": "bad",
+   "text": "Average waits: Tema 7.6 days, Abidjan 5 days, Durban 7.3 days (DGT anchorage 10.5 days). Port omissions leave cargo waiting for the next call.",
+   "action": "Add 1–2 weeks to West African cocoa, cashew and sesame, and South African macadamia. Check the omission notices."
+  },
+  {
+   "lane": "Canada West Coast (Vancouver, Prince Rupert)",
+   "level": "warn",
+   "text": "Vessel bunching is pushing delays into the rail network. Rail dwell is about 5–6 days at Vancouver.",
+   "action": "If you reroute from Panama to West Coast rail, allow 1 more week inland."
+  },
+  {
+   "lane": "Europe → Montréal (transatlantic)",
+   "level": "ok",
+   "text": "Space into the US and Canadian East Coast is gradually opening up. Rotterdam and Antwerp waits are about 1.3 days.",
+   "action": "Normal lead times."
+  }
+ ],
+ "ports": [
+  {
+   "port": "Tema (Ghana)",
+   "wait": 7.56,
+   "note": "Cocoa, cashew, sesame"
+  },
+  {
+   "port": "Durban (South Africa)",
+   "wait": 7.29,
+   "note": "DGT anchorage 10.5 days"
+  },
+  {
+   "port": "Abidjan (Côte d'Ivoire)",
+   "wait": 5.0,
+   "note": "Cocoa, cashew"
+  },
+  {
+   "port": "Genoa",
+   "wait": 2.5,
+   "note": ""
+  },
+  {
+   "port": "Colombo (Sri Lanka)",
+   "wait": 1.89,
+   "note": "Transhipment hub for India; omissions"
+  },
+  {
+   "port": "Shanghai",
+   "wait": 1.65,
+   "note": ""
+  },
+  {
+   "port": "Vung Tau / Cai Mep (Vietnam)",
+   "wait": 1.5,
+   "note": "Up to 4 days off-window; yard >90%"
+  },
+  {
+   "port": "Qingdao",
+   "wait": 1.42,
+   "note": ""
+  },
+  {
+   "port": "Rotterdam",
+   "wait": 1.36,
+   "note": "MVII yard 99%"
+  },
+  {
+   "port": "Savannah",
+   "wait": 1.3,
+   "note": "Chassis shortages"
+  },
+  {
+   "port": "Singapore",
+   "wait": 1.18,
+   "note": ""
+  },
+  {
+   "port": "New York / New Jersey",
+   "wait": 1.08,
+   "note": ""
+  },
+  {
+   "port": "Laem Chabang (Thailand)",
+   "wait": 1.0,
+   "note": ""
+  }
+ ],
+ "portsAsOf": "21–27 Oct 2026 · Kuehne+Nagel (7-day average vessel wait). Above 2 days = slightly disrupted, above 4 days = heavily disrupted."
+}
+</script>
+<!--DATA-END-->
+
+<script>
+/* ===== ACCESS ===== Hash = SHA-256("tootsi-enso|" + username + "|" + password). role: viewer | admin */
+var USERS = {
+  "achats": {"hash":"d0e2e079394ff37f84297b1062ce1d38db8fc9ca50a0cd17c064547d3ab66cc7","role":"viewer"},
+  "admin":  {"hash":"5d3225711906ed767c51599f6a47f40a47584424fe019097a94e5a9b58a4a69d","role":"admin"}
+};
+
+var ORIGINAL_HTML = "<!doctype html>\n" + document.documentElement.outerHTML;
+
+/* compact SHA-256 (works on file:// and http) */
+function sha256(s){function r(n,x){return(x>>>n)|(x<<(32-n))}var K=[],H=[],p=2,i,j;for(var c=0;c<64;p++){var pr=true;for(j=2;j*j<=p;j++)if(p%j===0){pr=false;break}if(pr){if(c<8)H[c]=(Math.pow(p,.5)*4294967296)|0;K[c++]=(Math.pow(p,1/3)*4294967296)|0}}
+var b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(i=0;i<b.length;i++)w[i>>2]|=b.charCodeAt(i)<<((3-i%4)*8);w[l>>5]|=0x80<<(24-l%32);w[((l+64>>9)<<4)+15]=l;
+for(i=0;i<w.length;i+=16){var a=H.slice(0),W=[];for(j=0;j<64;j++){if(j<16)W[j]=w[i+j]|0;else{var s0=r(7,W[j-15])^r(18,W[j-15])^(W[j-15]>>>3),s1=r(17,W[j-2])^r(19,W[j-2])^(W[j-2]>>>10);W[j]=(W[j-16]+s0+W[j-7]+s1)|0}
+var t1=(a[7]+(r(6,a[4])^r(11,a[4])^r(25,a[4]))+((a[4]&a[5])^(~a[4]&a[6]))+K[j]+W[j])|0,t2=((r(2,a[0])^r(13,a[0])^r(22,a[0]))+((a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2])))|0;a=[(t1+t2)|0].concat(a);a[4]=(a[4]+t1)|0;a.pop()}
+for(j=0;j<8;j++)H[j]=(H[j]+a[j])|0}var o="";for(i=0;i<8;i++)o+=("00000000"+(H[i]>>>0).toString(16)).slice(-8);return o}
+
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){return null}}
+function sess(k,v){try{if(v===undefined)return sessionStorage.getItem(k);if(v===null)sessionStorage.removeItem(k);else sessionStorage.setItem(k,v)}catch(e){return null}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function $(id){return document.getElementById(id)}
+function fmtDate(d){if(!d||!/^\d{4}-\d{2}-\d{2}/.test(d))return esc(d);var x=new Date(d+"T12:00:00");return x.toLocaleDateString("en-CA",{year:"numeric",month:"short",day:"numeric"})}
+function sign(v){v=Number(v);return(v>0?"+":"")+v.toFixed(1)+"°C"}
+
+var EMBED = JSON.parse($("desk-data").textContent);
+var DATA = EMBED;
+var ROLE = null;
+var CATS = ["Nuts","Peanuts","Dried Fruits","Superfoods","Seeds and Grains","Mixes","Snacks","Cereals","Chocolates","Candies","Toppings","Organic","Miscellaneous","Seasonal"];
+
+function migrate(d){ /* keeps older data files working */
+  if(!d.originLib)d.originLib=JSON.parse(JSON.stringify(EMBED.originLib||{}));
+  (d.products||[]).forEach(function(p){
+    if(typeof p.origins==="string")p.origins=p.origins.split(/,|;/).map(function(s){return s.trim()}).filter(Boolean);
+    if(!Array.isArray(p.origins))p.origins=[];
+    if(p.crop==null)p.crop=p.sensitivity||3;
+  });
+  (d.routes||[]).forEach(function(r,i){if(!r.id)r.id="r"+i});
+  return d;
+}
+function loadData(){
+  migrate(EMBED);DATA=JSON.parse(JSON.stringify(EMBED));
+  var local = store("tootsi-enso-local");
+  if(local){try{var L=JSON.parse(local);if(L&&L.updated>=EMBED.updated)DATA=migrate(L)}catch(e){}}
+}
+
+/* ===== RISK ENGINE =====
+   origin exposure (1-5, from the origin library) is adjusted for current El Niño strength,
+   then combined with crop sensitivity: risk = round( sqrt(crop x worst origin exposure) ). */
+var DER={};
+function intensityAdj(){var n=Number(DATA.enso.nino34_cpc_weekly);
+  if(isNaN(n))return{adj:0,txt:"Niño 3.4 value missing, so no strength adjustment is applied."};
+  if(n>=2.0)return{adj:0,txt:"El Niño is very strong (NOAA Niño 3.4 "+sign(n)+"), so origin exposure is applied in full."};
+  if(n>=1.5)return{adj:-1,txt:"El Niño is strong (NOAA Niño 3.4 "+sign(n)+"), so origin exposure is reduced by 1."};
+  if(n>=0.5)return{adj:-2,txt:"El Niño is weak to moderate (NOAA Niño 3.4 "+sign(n)+"), so origin exposure is reduced by 2."};
+  return{adj:-4,txt:"El Niño conditions are absent (NOAA Niño 3.4 "+sign(n)+"), so origin exposure is set to minimal."}}
+function findOrigin(name){var L=DATA.originLib||{};if(L[name])return name;var k=Object.keys(L).find(function(x){return x.toLowerCase()===String(name).toLowerCase()});return k||null}
+function computeAll(){var adj=intensityAdj().adj;DER={};
+  DATA.products.forEach(function(p){
+    var worst=1,routes={},notes=[],unrated=[];
+    p.origins.forEach(function(o){var k=findOrigin(o);
+      if(k){var O=DATA.originLib[k],r=Math.max(1,Math.min(5,O.risk+adj));worst=Math.max(worst,r);(O.routes||[]).forEach(function(x){routes[x]=1});notes.push({name:k,risk:r,window:O.window,effect:O.effect})}
+      else{unrated.push(o);worst=Math.max(worst,Math.max(1,3+adj));notes.push({name:o,risk:null})}});
+    var crop=Math.max(1,Math.min(5,Number(p.crop)||3));
+    DER[p.id]={score:Math.max(1,Math.min(5,Math.round(Math.sqrt(crop*worst)))),exposure:worst,crop:crop,routes:Object.keys(routes),notes:notes,unrated:unrated};
+  });}
+function chipHtml(o,risk,removable){var k=findOrigin(o);
+  return'<span class="chip'+(k?"":" unrated")+'" title="'+(k?"Exposure "+risk:"Not in the origin library yet, so it's counted as 3 until rated")+'">'+esc(o)+(k?' <i class="s'+risk+'">'+risk+'</i>':' <i>?</i>')+(removable?'<button type="button" data-rmorigin="'+esc(o)+'" aria-label="Remove '+esc(o)+'">×</button>':'')+'</span>'}
+function saveLocal(){DATA.updated=new Date().toISOString().slice(0,10);store("tootsi-enso-local",JSON.stringify(DATA));renderAll()}
+
+/* ===== LOGIN ===== */
+$("loginForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var u=$("u").value.trim().toLowerCase(),p=$("p").value;
+  var rec=USERS[u];
+  if(rec && sha256("tootsi-enso|"+u+"|"+p)===rec.hash){sess("tootsi-enso-role",rec.role);unlock(rec.role)}
+  else{$("loginErr").textContent="Incorrect username or password."}
+});
+$("logout").addEventListener("click",function(){sess("tootsi-enso-role",null);location.reload()});
+function unlock(role){ROLE=role;document.body.classList.remove("locked");if(role==="admin")$("adminTab").classList.remove("hide");renderAll()}
+
+/* ===== TABS ===== */
+$("tabs").addEventListener("click",function(e){var b=e.target.closest("button[data-tab]");if(!b)return;
+  [].forEach.call(document.querySelectorAll("#tabs button[data-tab]"),function(x){x.classList.toggle("on",x===b)});
+  [].forEach.call(document.querySelectorAll(".panel"),function(p){p.classList.toggle("hide",p.getAttribute("data-panel")!==b.getAttribute("data-tab"))});
+  window.scrollTo(0,0)});
+
+/* ===== RENDER ===== */
+function renderAll(){var E=DATA.enso;computeAll();
+  $("originList").innerHTML=Object.keys(DATA.originLib).sort().map(function(o){return'<option value="'+esc(o)+'">'}).join("");
+  $("intensityNote").textContent=intensityAdj().txt;
+  $("updatedLine").textContent="Updated "+fmtDate(DATA.updated)+" · next NOAA release "+fmtDate(E.next_noaa_release);
+  $("alertPill").textContent=E.alertStatus;
+  $("headline").textContent=E.headline;
+  $("synopsis").textContent=E.synopsis;
+  $("kpis").innerHTML=[
+    ["Niño 3.4 · NOAA weekly",sign(E.nino34_cpc_weekly),"Week of "+fmtDate(E.nino34_cpc_weekly_date)+" · relative basis"],
+    ["Niño 3.4 · IRI weekly",sign(E.nino34_iri_weekly),"Week centred "+fmtDate(E.nino34_iri_weekly_date)+" · traditional · Sept monthly "+sign(E.nino34_monthly_sep)],
+    ["Niño 1+2 · coastal",sign(E.nino12_cpc_weekly),"Extreme: Peru and Ecuador flood risk"],
+    ["Next NOAA discussion",fmtDate(E.next_noaa_release),"Last: "+fmtDate(E.cpc_last_discussion)+" · RONI "+E.roni_season+" "+sign(E.roni_latest)]
+  ].map(function(k){return'<div class="card kpi"><div class="label">'+esc(k[0])+'</div><div class="val">'+esc(k[1])+'</div><div class="sub">'+esc(k[2])+'</div></div>'}).join("");
+  $("seasonBars").innerHTML=E.seasons.map(function(s){var neutralWins=s.neutral>s.nino;return'<div class="bar"><span>'+esc(s.s)+'</span><div class="track"><div class="fill'+(neutralWins?" neutral":"")+'" style="width:'+(neutralWins?s.neutral:s.nino)+'%"></div></div><b>'+(neutralWins?s.neutral+"% N":s.nino+"%")+'</b></div>'}).join("");
+  $("strengthBars").innerHTML=E.strength.map(function(s){return'<div class="bar" title="'+esc(s.desc)+'"><span>'+esc(s.label)+'</span><div class="track"><div class="fill" style="width:'+s.p+'%"></div></div><b>'+s.p+'%</b></div>'}).join("");
+  $("strengthNote").textContent=E.strengthNote+" "+E.baseNote;
+  $("outlook").innerHTML=E.outlook.map(function(o){return"<li>"+esc(o)+"</li>"}).join("");
+  var top=DATA.products.slice().sort(function(a,b){return DER[b.id].score-DER[a.id].score}).slice(0,3);
+  $("topRisks").innerHTML=top.map(function(p){var s=DER[p.id].score;return'<div class="card"><span class="sens s'+s+'">'+s+'</span> <b>'+esc(p.name)+'</b><p class="muted" style="font-size:.85rem;margin:.5rem 0 0">'+esc(p.action)+'</p></div>'}).join("");
+  $("briefDate").textContent="Prepared "+fmtDate(DATA.updated)+", using NOAA and IRI data plus crop and price news to that date.";
+  $("decisions").querySelector("tbody").innerHTML=DATA.decisions.map(function(d){return"<tr><td><b>"+esc(d.line)+"</b></td><td>"+esc(d.cover)+"</td><td>"+esc(d.decision)+"</td></tr>"}).join("");
+  $("signals").innerHTML=DATA.signals.map(function(s){return'<div class="tl"><b>'+fmtDate(s.date)+'</b><span>'+esc(s.what)+'</span></div>'}).join("");
+  $("overbuy").innerHTML=DATA.overbuy;
+  renderShipping();
+  $("routes").innerHTML=DATA.routes.map(function(r){
+    var users=DATA.products.filter(function(p){return DER[p.id].routes.indexOf(r.id)>=0});
+    return'<div class="card route '+r.status+'"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><h3 style="margin:0">'+esc(r.name)+'</h3><span class="pill '+r.status+'">'+esc(r.label)+'</span></div><p style="margin:.5rem 0">'+esc(r.text)+'</p><p class="muted" style="margin:0;font-size:.88rem"><b>For Tootsi:</b> '+esc(r.impact)+'</p><p style="margin:.5rem 0 0;font-size:.85rem"><b>Lines on this route ('+users.length+'):</b> '+(users.length?users.map(function(p){return esc(p.name.split(/[(,]/)[0].trim())}).join(" · "):'<span class="muted">none</span>')+'</p></div>'}).join("");
+  $("sourceList").innerHTML=DATA.sources.map(function(s){return'<li><a href="'+esc(s.u)+'" target="_blank" rel="noopener">'+esc(s.t)+'</a></li>'}).join("");
+  var fc=$("fCat"),cur=fc.value;fc.innerHTML='<option value="">All categories</option>'+CATS.map(function(c){return"<option"+(c===cur?" selected":"")+">"+c+"</option>"}).join("");
+  renderProducts();renderViewerBar();
+  if(ROLE==="admin")renderAdmin();
+}
+
+function renderShipping(){
+  var F=DATA.freight||{items:[]},R=DATA.reliability||{carriers:[],alliances:[]};
+  $("freightKpis").innerHTML=F.items.map(function(x){var up=x.chg>0;return'<div class="card kpi"><div class="label">'+esc(x.k)+'</div><div class="val">$'+Number(x.v).toLocaleString("en-CA")+'</div><div class="sub" style="color:'+(x.chg===0?"var(--muted)":up?"var(--bad)":"var(--ok)")+'">'+(up?"▲ +":x.chg<0?"▼ ":"")+esc(x.chg)+'% this week</div></div>'}).join("");
+  $("freightNote").textContent=(F.note||"")+" Source: "+(F.source||"")+", "+fmtDate(F.asOf)+". Updated "+(F.next||"").toLowerCase()+".";
+  $("relGlobal").textContent=R.global!=null?R.global+"%":"—";
+  $("relSub").textContent=(R.globalChg>=0?"+":"")+R.globalChg+" pts this month · late ships average "+R.avgDelay+" days behind · "+R.asOf+" · "+(R.source||"");
+  $("relNote").textContent=R.note||"";
+  $("relBars").innerHTML=R.carriers.concat(R.alliances||[]).map(function(x){return'<div class="bar" style="grid-template-columns:150px 1fr 50px"><span style="font-size:.8rem">'+esc(x.c)+'</span><div class="track"><div class="fill'+(x.p<50?"":" neutral")+'" style="width:'+x.p+'%"></div></div><b>'+x.p+'%</b></div>'}).join("");
+  $("rollovers").innerHTML=(DATA.rollovers||[]).map(function(r){var lab={bad:"High",warn:"Elevated",ok:"Low"}[r.level]||r.level;return'<div class="card route '+r.level+'"><div style="display:flex;justify-content:space-between;gap:8px"><h3 style="margin:0">'+esc(r.lane)+'</h3><span class="pill '+r.level+'">'+lab+' risk</span></div><p style="margin:.5rem 0">'+esc(r.text)+'</p><p class="muted" style="margin:0;font-size:.88rem"><b>Action:</b> '+esc(r.action)+'</p></div>'}).join("");
+  $("portTable").querySelector("tbody").innerHTML=(DATA.ports||[]).slice().sort(function(a,b){return b.wait-a.wait}).map(function(p){var st=p.wait>4?["bad","Heavily disrupted"]:p.wait>2?["warn","Slightly disrupted"]:["ok","Normal"];return"<tr><td><b>"+esc(p.port)+"</b></td><td>"+Number(p.wait).toFixed(1)+' days</td><td><span class="pill '+st[0]+'">'+st[1]+"</span></td><td>"+esc(p.note)+"</td></tr>"}).join("");
+  $("portsAsOf").textContent=DATA.portsAsOf||"";
+  $("carrierTable").querySelector("tbody").innerHTML=(DATA.carriers||[]).map(function(c){return'<tr><td><b>'+esc(c.carrier)+'</b></td><td><span class="pill '+esc(c.status)+'">'+esc(c.type)+'</span></td><td>'+esc(c.detail)+'</td><td>'+esc(c.lanes)+'</td><td style="white-space:nowrap">'+fmtDate(c.effective)+'</td></tr>'}).join("");
+}
+
+/* ===== LIVE UPDATES ===== */
+var liveTimer=null,lastCheck=null,lastOk=null,liveErr="";
+function liveCfg(){var L=DATA.live||{};var u=store("tootsi-enso-liveurl");var m=store("tootsi-enso-livemin");return{url:u||L.url||"tootsi-enso-data.json",min:Number(m||L.refreshMinutes||30)}}
+function canFetch(url){return /^https?:/i.test(url)||/^https?:/i.test(location.protocol)}
+function checkLive(){var c=liveCfg();lastCheck=new Date();
+  if(!canFetch(c.url)){liveErr="offline copy";updLive();return}
+  var u=c.url+(c.url.indexOf("?")>=0?"&":"?")+"t="+Date.now();
+  fetch(u,{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(function(d){
+    lastOk=new Date();liveErr="";
+    if(d&&d.enso&&d.products&&d.updated>DATA.updated){var keep=ROLE==="viewer"?originDiff():{};DATA=migrate(d);EMBED=JSON.parse(JSON.stringify(DATA));
+      Object.keys(keep).forEach(function(id){var p=DATA.products.find(function(x){return x.id===id});if(p)p.origins=keep[id].origins});
+      if(ROLE)renderAll();flash("New data received ("+fmtDate(d.updated)+")")}
+    updLive()}).catch(function(e){liveErr=String(e.message||e);updLive()})}
+function updLive(){var el=$("liveStatus");if(!el)return;var c=liveCfg();
+  if(liveErr==="offline copy"){el.innerHTML='<span style="color:var(--muted)">● Offline copy</span>'}
+  else if(liveErr){el.innerHTML='<span style="color:var(--warn)" title="'+esc(liveErr)+'">● Live feed unreachable</span>'}
+  else if(lastOk){el.innerHTML='<span style="color:var(--ok)">● Live</span> · checked '+lastOk.toLocaleTimeString("en-CA",{hour:"2-digit",minute:"2-digit"})}
+  else el.textContent="connecting…";
+  var dt=$("liveDetail");if(dt)dt.textContent="Current address: "+c.url+" · every "+c.min+" min · "+(liveErr?("status: "+liveErr):lastOk?"last successful check "+lastOk.toLocaleString("en-CA"):"not checked yet")}
+function startLive(){if(liveTimer)clearInterval(liveTimer);var c=liveCfg();checkLive();liveTimer=setInterval(checkLive,Math.max(1,c.min)*60000)}
+function flash(t){var n=document.createElement("div");n.textContent=t;n.style.cssText="position:fixed;bottom:16px;right:16px;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;z-index:60;font-size:.9rem";document.body.appendChild(n);setTimeout(function(){n.remove()},4000)}
+
+var sortK="sensitivity",sortDir=-1,openId=null;
+function renderProducts(){
+  var q=$("q").value.toLowerCase(),c=$("fCat").value,m=Number($("fSens").value);
+  var rows=DATA.products.filter(function(p){return(!c||p.category===c)&&DER[p.id].score>=m&&(!q||(p.name+" "+p.origins.join(" ")+" "+p.skus+" "+p.category).toLowerCase().indexOf(q)>=0)});
+  function val(p,k){return k==="sensitivity"?DER[p.id].score:k==="origins"?p.origins.join(", "):p[k]}
+  rows.sort(function(a,b){var x=val(a,sortK),y=val(b,sortK);if(typeof x==="number")return(x-y)*sortDir;return String(x).localeCompare(String(y))*sortDir});
+  var routeName={};DATA.routes.forEach(function(r){routeName[r.id]=r.name});
+  $("ptable").querySelector("tbody").innerHTML=rows.map(function(p){var d=DER[p.id],nm={};d.notes.forEach(function(n){nm[n.name]=n.risk});
+    var r='<tr class="row" data-id="'+esc(p.id)+'"><td><b>'+esc(p.name)+'</b>'+(p.isNew?'<span class="tag">NEW</span>':'')+'</td><td>'+esc(p.category)+'</td><td>'+p.origins.map(function(o){return chipHtml(o,nm[findOrigin(o)||o],false)}).join("")+'</td><td><span class="sens s'+d.score+'">'+d.score+'</span></td><td>'+esc(p.window)+'</td><td>'+esc(p.cover)+(/^\d/.test(p.cover)?" mo":"")+'</td></tr>';
+    if(openId===p.id){
+      r+='<tr class="detail"><td colspan="6">'+
+      '<p class="calc" style="margin:0 0 8px">Risk '+d.score+' = crop sensitivity '+d.crop+' × worst origin exposure '+d.exposure+' (square root, rounded)</p>'+
+      '<p style="margin:0 0 6px"><b>Mechanism:</b> '+esc(p.mechanism)+'</p>'+
+      '<p style="margin:0 0 6px"><b>Action:</b> '+esc(p.action)+'</p>'+
+      '<div style="margin:6px 0"><b>By origin:</b>'+d.notes.map(function(n){return'<p class="onote">'+(n.risk?'<span class="sens s'+n.risk+'" style="min-width:22px;height:20px;font-size:.75rem">'+n.risk+'</span> ':'<span class="chip unrated">unrated</span> ')+'<b>'+esc(n.name)+'</b>'+(n.risk?' · '+esc(n.window)+': '+esc(n.effect):': not in the origin library yet. An admin can rate it in Admin → Origin library.')+'</p>'}).join("")+'</div>'+
+      '<p style="margin:6px 0"><b>Shipping routes:</b> '+(d.routes.length?d.routes.map(function(x){return esc(routeName[x]||x)}).join(" · "):'<span class="muted">road/rail only</span>')+'</p>'+
+      '<p class="muted" style="margin:0">SKUs: '+esc(p.skus||"—")+'</p>'+
+      (ROLE?'<div class="oedit" data-pid="'+esc(p.id)+'"><b style="align-self:center;font-size:.85rem">Edit origins:</b>'+p.origins.map(function(o){return chipHtml(o,nm[findOrigin(o)||o],true)}).join("")+'<input list="originList" placeholder="Add origin…" class="addOriginInput" style="min-width:180px"><button type="button" class="btn small" data-addorigin="1">Add</button></div>':'')+
+      '</td></tr>';}
+    return r}).join("")||'<tr><td colspan="6" class="muted">No products match.</td></tr>';
+}
+function originDiff(){var base={},out={};EMBED.products.forEach(function(p){base[p.id]=p.origins.join("|")});
+  DATA.products.forEach(function(p){if(base[p.id]!==undefined&&base[p.id]!==p.origins.join("|"))out[p.id]={name:p.name,origins:p.origins.slice()}});return out}
+function renderViewerBar(){var show=ROLE==="viewer"&&Object.keys(originDiff()).length>0;$("viewerChanges").classList.toggle("hide",!show)}
+$("exportOriginChanges").addEventListener("click",function(){
+  download("tootsi-origin-changes-"+new Date().toISOString().slice(0,10)+".json",JSON.stringify({kind:"origin-changes",from:"achats",date:new Date().toISOString().slice(0,10),products:originDiff()},null,1),"application/json")});
+$("undoOriginChanges").addEventListener("click",function(){if(confirm("Undo your origin changes on this computer?")){store("tootsi-enso-local",null);DATA=JSON.parse(JSON.stringify(EMBED));renderAll()}});
+function addOriginTo(pid,inp){var v=inp.value.trim();if(!v)return;var p=DATA.products.find(function(x){return x.id===pid});var k=findOrigin(v)||v;
+  if(p.origins.map(function(o){return o.toLowerCase()}).indexOf(k.toLowerCase())<0)p.origins.push(k);openId=pid;saveLocal()}
+$("ptable").addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList.contains("addOriginInput")){e.preventDefault();addOriginTo(e.target.closest(".oedit").getAttribute("data-pid"),e.target)}});
+$("ptable").addEventListener("click",function(e){
+  var ed=e.target.closest(".oedit");
+  if(ed){var pid=ed.getAttribute("data-pid"),rm=e.target.getAttribute("data-rmorigin");
+    if(rm){var p=DATA.products.find(function(x){return x.id===pid});p.origins=p.origins.filter(function(o){return o!==rm});openId=pid;saveLocal()}
+    else if(e.target.getAttribute("data-addorigin"))addOriginTo(pid,ed.querySelector(".addOriginInput"));
+    return}
+  if(e.target.closest("tr.detail"))return;
+  var th=e.target.closest("th");if(th){var k=th.getAttribute("data-k");if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=k==="sensitivity"?-1:1}renderProducts();return}
+  var tr=e.target.closest("tr.row");if(tr){var id=tr.getAttribute("data-id");openId=openId===id?null:id;renderProducts()}});
+["q","fCat","fSens"].forEach(function(id){$(id).addEventListener("input",renderProducts)});
+
+/* ===== ADMIN ===== */
+var ENSO_FIELDS=[["alertStatus","Alert status","text"],["headline","Headline","text"],["nino34_cpc_weekly","Niño 3.4 NOAA weekly (°C)","number"],["nino34_cpc_weekly_date","NOAA weekly date","date"],["nino34_iri_weekly","Niño 3.4 IRI weekly (°C)","number"],["nino34_iri_weekly_date","IRI weekly date","date"],["nino12_cpc_weekly","Niño 1+2 weekly (°C)","number"],["cpc_last_discussion","Last NOAA discussion","date"],["next_noaa_release","Next NOAA release","date"],["synopsis","Synopsis","area"]];
+function renderAdmin(){var E=DATA.enso;
+  $("ensoForm").innerHTML=ENSO_FIELDS.map(function(f){var v=esc(E[f[0]]);return'<div'+(f[2]==="area"?' class="full"':'')+'><label>'+f[1]+'</label>'+(f[2]==="area"?'<textarea id="ef_'+f[0]+'">'+v+'</textarea>':'<input id="ef_'+f[0]+'" type="'+f[2]+'" step="0.1" value="'+v+'">')+'</div>'}).join("");
+  $("pf_category").innerHTML=CATS.map(function(c){return"<option>"+c+"</option>"}).join("");
+  renderOriginLib();
+  var c=liveCfg();if(document.activeElement!==$("liveUrl"))$("liveUrl").value=c.url;if(document.activeElement!==$("liveMin"))$("liveMin").value=c.min;updLive();
+  if(document.activeElement!==$("shipJson"))$("shipJson").value=JSON.stringify(DATA[$("shipKey").value]||[],null,1);
+  $("adminList").querySelector("tbody").innerHTML=DATA.products.map(function(p){var s=DER[p.id].score;return'<tr><td><span class="sens s'+s+'">'+s+'</span> '+esc(p.name)+'<div class="muted" style="font-size:.8rem">'+esc(p.origins.join(", "))+'</div></td><td style="white-space:nowrap;text-align:right"><button class="btn small" data-edit="'+esc(p.id)+'">Edit</button> <button class="btn small" data-del="'+esc(p.id)+'">Delete</button></td></tr>'}).join("");
+}
+$("saveEnso").addEventListener("click",function(){ENSO_FIELDS.forEach(function(f){var v=$("ef_"+f[0]).value;DATA.enso[f[0]]=f[2]==="number"?Number(v):v});DATA.enso.asOf=new Date().toISOString().slice(0,10);saveLocal();alert("ENSO reading saved.")});
+$("pform").addEventListener("submit",function(e){e.preventDefault();
+  var id=$("pf_id").value||("p"+Date.now());
+  var p={id:id};["name","category","skus","window","cover","mechanism","action"].forEach(function(k){p[k]=$("pf_"+k).value.trim()});
+  p.origins=$("pf_origins").value.split(/,|;/).map(function(s){s=s.trim();return findOrigin(s)||s}).filter(Boolean);
+  p.crop=Math.max(1,Math.min(5,Number($("pf_crop").value)||3));p.isNew=$("pf_isNew").value==="true";
+  var i=DATA.products.findIndex(function(x){return x.id===id});if(i>=0)DATA.products[i]=p;else DATA.products.push(p);
+  resetPF();saveLocal()});
+function resetPF(){$("pform").reset();$("pf_id").value="";$("pfTitle").textContent="Add a product line"}
+$("pfReset").addEventListener("click",resetPF);
+$("adminList").addEventListener("click",function(e){var ed=e.target.getAttribute("data-edit"),de=e.target.getAttribute("data-del");
+  if(ed){var p=DATA.products.find(function(x){return x.id===ed});$("pf_id").value=p.id;["name","category","skus","crop","window","cover","mechanism","action"].forEach(function(k){$("pf_"+k).value=p[k]==null?"":p[k]});$("pf_origins").value=p.origins.join(", ");$("pf_isNew").value=String(!!p.isNew);$("pfTitle").textContent="Edit product line";$("pform").scrollIntoView({behavior:"smooth"})}
+  if(de&&confirm("Delete this product line?")){DATA.products=DATA.products.filter(function(x){return x.id!==de});saveLocal()}});
+$("saveLive").addEventListener("click",function(){var u=$("liveUrl").value.trim()||"tootsi-enso-data.json",m=Math.max(1,Number($("liveMin").value)||30);
+  DATA.live={url:u,refreshMinutes:m};store("tootsi-enso-liveurl",u);store("tootsi-enso-livemin",String(m));saveLocal();startLive()});
+$("shipKey").addEventListener("change",function(){$("shipJson").value=JSON.stringify(DATA[this.value]||[],null,1);$("shipErr").textContent=""});
+$("saveShip").addEventListener("click",function(){try{DATA[$("shipKey").value]=JSON.parse($("shipJson").value);$("shipErr").textContent="";saveLocal();flash("Shipping data saved")}catch(e){$("shipErr").textContent="This isn't valid JSON: "+e.message}});
+
+/* origin library */
+function renderOriginLib(){var L=DATA.originLib;
+  $("of_routes").innerHTML=DATA.routes.map(function(r){return'<label style="display:flex;gap:6px;align-items:center;color:var(--ink);margin:0"><input type="checkbox" value="'+esc(r.id)+'"> '+esc(r.name)+'</label>'}).join("");
+  var used={},unr={};DATA.products.forEach(function(p){p.origins.forEach(function(o){var k=findOrigin(o);if(k)(used[k]=used[k]||[]).push(p.name.split(/[(,]/)[0].trim());else unr[o]=1})});
+  var u=Object.keys(unr);$("unratedNote").classList.toggle("hide",!u.length);
+  $("unratedNote").innerHTML=u.length?"<b>Origins in use that aren't rated yet:</b> "+u.map(esc).join(", ")+". Each is counted as exposure 3 until you rate it. Type the same name below to rate it.":"";
+  $("originTable").querySelector("tbody").innerHTML=Object.keys(L).sort(function(a,b){return L[b].risk-L[a].risk||a.localeCompare(b)}).map(function(k){var O=L[k];
+    return'<tr><td><b>'+esc(k)+'</b></td><td>'+esc(O.region)+'</td><td><span class="sens s'+O.risk+'">'+O.risk+'</span></td><td>'+esc(O.window)+'</td><td style="font-size:.82rem">'+(used[k]?esc(used[k].join(", ")):'<span class="muted">—</span>')+'</td><td style="white-space:nowrap;text-align:right"><button class="btn small" data-oedit="'+esc(k)+'">Edit</button> <button class="btn small" data-odel="'+esc(k)+'">Delete</button></td></tr>'}).join("")}
+function resetOF(){$("oform").reset();[].forEach.call($("of_routes").querySelectorAll("input"),function(c){c.checked=false})}
+$("ofReset").addEventListener("click",resetOF);
+$("of_name").addEventListener("change",function(){var k=findOrigin(this.value.trim());if(k)fillOF(k)});
+function fillOF(k){var O=DATA.originLib[k];$("of_name").value=k;$("of_region").value=O.region||"";$("of_risk").value=O.risk;$("of_window").value=O.window||"";$("of_effect").value=O.effect||"";
+  [].forEach.call($("of_routes").querySelectorAll("input"),function(c){c.checked=(O.routes||[]).indexOf(c.value)>=0})}
+$("oform").addEventListener("submit",function(e){e.preventDefault();var n=$("of_name").value.trim();if(!n)return;var k=findOrigin(n)||n;
+  DATA.originLib[k]={region:$("of_region").value.trim(),risk:Math.max(1,Math.min(5,Number($("of_risk").value)||3)),window:$("of_window").value.trim(),effect:$("of_effect").value.trim(),
+    routes:[].filter.call($("of_routes").querySelectorAll("input"),function(c){return c.checked}).map(function(c){return c.value})};
+  DATA.products.forEach(function(p){p.origins=p.origins.map(function(o){return o.toLowerCase()===k.toLowerCase()?k:o})});
+  resetOF();saveLocal()});
+$("originTable").addEventListener("click",function(e){var ed=e.target.getAttribute("data-oedit"),de=e.target.getAttribute("data-odel");
+  if(ed){fillOF(ed);$("oform").scrollIntoView({behavior:"smooth"})}
+  if(de&&confirm("Delete "+de+" from the origin library? Products that use it will show it as unrated.")){delete DATA.originLib[de];saveLocal()}});
+
+function download(name,text,type){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
+$("dlJson").addEventListener("click",function(){download("tootsi-enso-data.json",JSON.stringify(DATA,null,1),"application/json")});
+$("upJson").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result);
+    if(d.kind==="origin-changes"){var n=0,list=[];Object.keys(d.products||{}).forEach(function(id){var p=DATA.products.find(function(x){return x.id===id});var c=d.products[id];
+        if(p&&Array.isArray(c.origins)){p.origins=c.origins.map(function(o){o=String(o).trim();return findOrigin(o)||o}).filter(Boolean);n++;list.push(p.name.split(/[(,]/)[0].trim())}});
+      saveLocal();e.target.value="";alert("Merged origin changes for "+n+" line(s)"+(list.length?": "+list.join(", "):"")+". Rate any new origins in the origin library, then download the updated dashboard.");return}
+    if(!d.enso||!d.products)throw 0;DATA=migrate(d);saveLocal();alert("Data imported.")}catch(x){alert("This file isn't a valid desk data file.")}};r.readAsText(f)});
+$("dlHtml").addEventListener("click",function(){
+  var s=ORIGINAL_HTML,a=s.indexOf('<script id="desk-data" type="application/json">'),b=s.indexOf("<\/script>",a);
+  var json=JSON.stringify(DATA,null,1).replace(/<\//g,"<\\/");
+  var out=s.slice(0,a)+'<script id="desk-data" type="application/json">\n'+json+"\n"+s.slice(b);
+  out=out.replace('<body class="">','<body class="locked">');
+  download("Tootsi_ElNino_Risk_Desk.html",out,"text/html")});
+$("resetLocal").addEventListener("click",function(){if(confirm("Discard changes saved in this browser and go back to the file's data?")){store("tootsi-enso-local",null);DATA=JSON.parse(JSON.stringify(EMBED));renderAll()}});
+$("genHash").addEventListener("click",function(){var u=$("cu").value.trim().toLowerCase(),p=$("cp").value;if(!u||!p)return;$("hashOut").textContent='"'+u+'": {"hash":"'+sha256("tootsi-enso|"+u+"|"+p)+'","role":"viewer"}'});
+
+/* ===== BOOT ===== */
+loadData();
+startLive();
+var saved=sess("tootsi-enso-role");if(saved==="viewer"||saved==="admin")unlock(saved);
+</script>
+</body>
+</html>
